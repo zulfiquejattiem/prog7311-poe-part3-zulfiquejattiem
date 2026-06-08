@@ -1,0 +1,121 @@
+﻿using Microsoft.AspNetCore.Mvc;
+using System.Net.Http.Headers;
+using System.Net.Http.Json;
+using TechMove.Shared.ServiceRequests;
+using TechMove.Shared.Contracts;
+
+namespace TechMove.Web.Controllers
+{
+    public class ServiceRequestsController : Controller
+    {
+        private readonly HttpClient _http;
+
+        public ServiceRequestsController(IHttpClientFactory factory)
+        {
+            _http = factory.CreateClient("api");
+        }
+
+        private bool IsLoggedIn()
+        {
+            return !string.IsNullOrEmpty(HttpContext.Session.GetString("JWT"));
+        }
+
+        private void AddJwt()
+        {
+            var token = HttpContext.Session.GetString("JWT");
+
+            if (string.IsNullOrEmpty(token))
+                throw new Exception("Not logged in");
+
+            _http.DefaultRequestHeaders.Authorization =
+                new AuthenticationHeaderValue("Bearer", token);
+        }
+
+        // ✅ LIST
+        public async Task<IActionResult> Index()
+        {
+            if (!IsLoggedIn())
+                return RedirectToAction("Login", "Auth");
+
+            AddJwt();
+            var data = await _http.GetFromJsonAsync<List<ServiceRequestDto>>("api/servicerequests");
+
+            return View(data);
+        }
+
+        // ✅ CREATE
+        public async Task<IActionResult> Create()
+        {
+            if (!IsLoggedIn())
+                return RedirectToAction("Login", "Auth");
+
+            AddJwt();
+            ViewBag.Contracts = await _http.GetFromJsonAsync<List<ContractDto>>("api/contracts");
+
+            return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Create(ServiceRequestCreateDto dto)
+        {
+            AddJwt();
+
+            var response = await _http.PostAsJsonAsync("api/servicerequests", dto);
+
+            if (!response.IsSuccessStatusCode)
+            {
+                ModelState.AddModelError("", "Invalid contract status");
+                // Repopulate contracts for the view before returning so the select list renders
+                ViewBag.Contracts = await _http.GetFromJsonAsync<List<ContractDto>>("api/contracts");
+                return View(dto);
+            }
+
+            return RedirectToAction(nameof(Index));
+        }
+
+        // ✅ DETAILS
+        public async Task<IActionResult> Details(int id)
+        {
+            AddJwt();
+            var item = await _http.GetFromJsonAsync<ServiceRequestDto>($"api/servicerequests/{id}");
+
+            return View(item);
+        }
+
+        // ✅ EDIT
+        public async Task<IActionResult> Edit(int id)
+        {
+            AddJwt();
+            var item = await _http.GetFromJsonAsync<ServiceRequestDto>($"api/servicerequests/{id}");
+
+            return View(item);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Edit(ServiceRequestDto dto)
+        {
+            AddJwt();
+
+            await _http.PutAsJsonAsync($"api/servicerequests/{dto.Id}", dto);
+            return RedirectToAction(nameof(Index));
+        }
+
+        // ✅ DELETE
+        public async Task<IActionResult> Delete(int id)
+        {
+            AddJwt();
+            var item = await _http.GetFromJsonAsync<ServiceRequestDto>($"api/servicerequests/{id}");
+
+            return View(item);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> DeleteConfirmed(int id)
+        {
+            AddJwt();
+
+            await _http.DeleteAsync($"api/servicerequests/{id}");
+            return RedirectToAction(nameof(Index));
+        }
+    }
+}

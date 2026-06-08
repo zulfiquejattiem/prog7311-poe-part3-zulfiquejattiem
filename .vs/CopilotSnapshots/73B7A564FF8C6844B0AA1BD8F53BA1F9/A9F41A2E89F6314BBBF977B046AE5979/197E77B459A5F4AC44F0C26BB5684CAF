@@ -1,0 +1,156 @@
+﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using TechMove.Api.Data;
+using TechMove.Api.Models;
+using TechMove.Api.Services.Interfaces;
+using TechMove.Shared.Contracts;
+using TechMove.Shared.ServiceRequests;
+using Microsoft.Extensions.Logging;
+using System.Linq;
+
+namespace TechMove.Api.Controllers
+{
+    [ApiController]
+    [Route("api/[controller]")]
+    public class ServiceRequestsController : ControllerBase
+    {
+        private readonly ApplicationDbContext _context;
+        private readonly ICurrencyExchangeService _currency;
+        private readonly ILogger<ServiceRequestsController> _logger;
+
+        public ServiceRequestsController(ApplicationDbContext context,
+            ICurrencyExchangeService currency,
+            ILogger<ServiceRequestsController> logger)
+        {
+            _context = context;
+            _currency = currency;
+            _logger = logger;
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> Get()
+        {
+            try
+            {
+                _logger.LogInformation("GET all service requests called");
+                var list = await _context.ServiceRequests.ToListAsync();
+                var dtos = list.Select(r => ToDto(r));
+                return Ok(dtos);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error retrieving service requests");
+                return Problem("An error occurred while retrieving service requests.");
+            }
+        }
+
+
+
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetById(int id)
+        {
+            try
+            {
+                _logger.LogInformation("GET service request {Id} called", id);
+                var req = await _context.ServiceRequests.FindAsync(id);
+                if (req == null) return NotFound();
+                return Ok(ToDto(req));
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error retrieving service request {Id}", id);
+                return Problem("An error occurred while retrieving the service request.");
+            }
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Create(ServiceRequestCreateDto dto)
+        {
+            try
+            {
+                _logger.LogInformation("Create service request called for contract {ContractId}", dto.ContractId);
+
+                var contract = await _context.Contracts.FindAsync(dto.ContractId);
+
+                if (contract == null)
+                    return BadRequest("Contract not found");
+
+                // ✅ WORKFLOW RULE
+                if (contract.Status == ContractStatus.Expired ||
+                    contract.Status == ContractStatus.OnHold)
+                {
+                    return BadRequest("Cannot create request for expired/on-hold contract");
+                }
+
+                var rate = await _currency.GetUsdToZarAsync();
+
+                var request = new ServiceRequest
+                {
+                    ContractId = dto.ContractId,
+                    Description = dto.Description,
+                    CostUSD = dto.CostUSD,
+                    CostZAR = dto.CostUSD * rate,
+                    Status = ServiceRequestStatus.Pending
+                };
+
+                _context.ServiceRequests.Add(request);
+                await _context.SaveChangesAsync();
+
+                return Ok(ToDto(request));
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error creating service request for contract {ContractId}", dto?.ContractId);
+                return Problem("An error occurred while creating the service request.");
+            }
+        }
+
+        [HttpPut("{id}")]
+        public async Task<IActionResult> Update(int id, ServiceRequestDto dto)
+        {
+            try
+            {
+                _logger.LogInformation("Update service request {Id} called", id);
+                var req = await _context.ServiceRequests.FindAsync(id);
+                if (req == null) return NotFound();
+
+                // update allowed fields
+                req.Description = dto.Description;
+                req.Status = dto.Status;
+                if (dto.CostUSD != req.CostUSD)
+                {
+                    req.CostUSD = dto.CostUSD;
+                    var rate = await _currency.GetUsdToZarAsync();
+                    req.CostZAR = dto.CostUSD * rate;
+                }
+
+                await _context.SaveChangesAsync();
+                return Ok(ToDto(req));
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error updating service request {Id}", id);
+                return Problem("An error occurred while updating the service request.");
+            }
+        }
+
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> Delete(int id)
+        {
+            try
+            {
+                _logger.LogInformation("Delete service request {Id} called", id);
+                var req = await _context.ServiceRequests.FindAsync(id);
+                if (req == null) return NotFound();
+                _context.ServiceRequests.Remove(req);
+                await _context.SaveChangesAsync();
+                return NoContent();
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error deleting service request {Id}", id);
+                return Problem("An error occurred while deleting the service request.");
+            }
+        }
+    }
+}

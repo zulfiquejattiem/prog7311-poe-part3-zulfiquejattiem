@@ -1,0 +1,7 @@
+﻿namespace TechMove.Web.ViewModels
+{
+    public class ContractSearchViewModel
+    {
+        public string Query { get; set; } = "";
+    }
+}

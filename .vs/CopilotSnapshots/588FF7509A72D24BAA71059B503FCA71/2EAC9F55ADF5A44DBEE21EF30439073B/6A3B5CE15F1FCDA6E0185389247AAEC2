@@ -1,0 +1,37 @@
+﻿using TechMove.Api.Data;
+using TechMove.Api.Models;
+using TechMove.Shared.Contracts;
+using Microsoft.EntityFrameworkCore;
+
+namespace TechMove.Api.Services.Implementations
+{
+    public class ServiceRequestService
+    {
+        private readonly ApplicationDbContext _context;
+
+        public ServiceRequestService(ApplicationDbContext context)
+        {
+            _context = context;
+        }
+
+        public async Task<ServiceRequest> CreateAsync(ServiceRequest request)
+        {
+            var contract = await _context.Contracts.FindAsync(request.ContractId);
+
+            if (contract == null)
+                throw new Exception("Contract not found");
+
+            // ✅ WORKFLOW RULE
+            if (contract.Status == ContractStatus.Expired ||
+                contract.Status == ContractStatus.OnHold)
+            {
+                throw new Exception("Cannot create request for expired/on-hold contract");
+            }
+
+            _context.ServiceRequests.Add(request);
+            await _context.SaveChangesAsync();
+
+            return request;
+        }
+    }
+}

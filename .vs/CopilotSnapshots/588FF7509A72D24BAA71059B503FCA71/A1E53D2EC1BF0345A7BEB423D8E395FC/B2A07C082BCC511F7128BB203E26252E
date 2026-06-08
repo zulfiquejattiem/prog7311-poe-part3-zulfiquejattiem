@@ -1,0 +1,30 @@
+﻿namespace TechMove.Api.Services.Implementations
+{
+    public class FileService
+    {
+        private readonly IWebHostEnvironment _env;
+
+        public FileService(IWebHostEnvironment env)
+        {
+            _env = env;
+        }
+
+        public async Task<string> SavePdfAsync(IFormFile file)
+        {
+            if (!file.FileName.EndsWith(".pdf"))
+                throw new Exception("Only PDF allowed");
+
+            var path = Path.Combine(_env.ContentRootPath, "uploads");
+
+            if (!Directory.Exists(path))
+                Directory.CreateDirectory(path);
+
+            var filePath = Path.Combine(path, Guid.NewGuid() + ".pdf");
+
+            using var stream = new FileStream(filePath, FileMode.Create);
+            await file.CopyToAsync(stream);
+
+            return filePath;
+        }
+    }
+}

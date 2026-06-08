@@ -1,0 +1,20 @@
+﻿using TechMove.Shared.ServiceRequests;
+
+namespace TechMove.Api.Models
+{
+    public static class ServiceRequestMappings
+    {
+        public static ServiceRequestDto ToDto(this ServiceRequest r)
+        {
+            return new ServiceRequestDto
+            {
+                Id = r.Id,
+                ContractId = r.ContractId,
+                Description = r.Description,
+                CostUSD = r.CostUSD,
+                CostZAR = r.CostZAR,
+                Status = r.Status
+            };
+        }
+    }
+}

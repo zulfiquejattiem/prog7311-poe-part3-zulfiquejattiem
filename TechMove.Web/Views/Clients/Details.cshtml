@@ -1,0 +1,11 @@
+@model TechMove.Shared.Clients.ClientDto
+
+<h2>Client Details</h2>
+
+<div>
+    <p><strong>Name:</strong> @Model.Name</p>
+    <p><strong>Contact:</strong> @Model.ContactDetails</p>
+    <p><strong>Region:</strong> @Model.Region</p>
+</div>
+
+<a asp-action="Index" class="btn btn-secondary">Back</a>

@@ -1,0 +1,12 @@
+@model TechMove.Shared.ServiceRequests.ServiceRequestDto
+
+<h2>Details</h2>
+
+<div>
+    <p><strong>Description:</strong> @Model.Description</p>
+    <p><strong>USD:</strong> @Model.CostUSD</p>
+    <p><strong>ZAR:</strong> @Model.CostZAR</p>
+    <p><strong>Status:</strong> @Model.Status</p>
+</div>
+
+<a asp-action="Index" class="btn btn-secondary">Back</a>

@@ -1,0 +1,11 @@
+﻿using TechMove.Shared.ServiceRequests;
+
+namespace TechMove.Api.Services.Interfaces
+{
+    public interface IServiceRequestService
+    {
+        Task<ServiceRequestDto[]> GetAllAsync();
+        Task<ServiceRequestDto?> GetByIdAsync(int id);
+        Task<ServiceRequestDto> CreateAsync(ServiceRequestCreateDto dto);
+    }
+}

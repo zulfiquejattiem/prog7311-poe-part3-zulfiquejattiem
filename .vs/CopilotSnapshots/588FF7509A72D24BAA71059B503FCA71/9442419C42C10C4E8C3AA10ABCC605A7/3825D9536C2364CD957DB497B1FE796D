@@ -1,0 +1,13 @@
+﻿using TechMove.Shared.ServiceRequests;
+
+namespace TechMove.Api.Models
+{
+    public class ServiceRequest
+    {
+        public int Id { get; set; }
+        public int ClientId { get; set; }
+        public string Summary { get; set; } = "";
+        public string Details { get; set; } = "";
+        public ServiceRequestStatus Status { get; set; }
+    }
+}

@@ -1,0 +1,13 @@
+@model TechMove.Shared.Contracts.ContractDto
+
+<h2>Contract Details</h2>
+
+<div>
+    <p><strong>Client:</strong> @Model.ClientName</p>
+    <p><strong>Service Level:</strong> @Model.ServiceLevel</p>
+    <p><strong>Status:</strong> @Model.Status</p>
+    <p><strong>Start:</strong> @Model.StartDate.ToShortDateString()</p>
+    <p><strong>End:</strong> @Model.EndDate?.ToShortDateString()</p>
+</div>
+
+<a asp-action="Index" class="btn btn-secondary">Back</a>

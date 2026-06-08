@@ -1,0 +1,19 @@
+﻿using Microsoft.AspNetCore.Mvc;
+using TechMove.Shared.ServiceRequests;
+
+namespace TechMove.Api.Controllers
+{
+    [ApiController]
+    [Route("api/[controller]")]
+    public class ServiceRequestsController : ControllerBase
+    {
+        [HttpGet]
+        public ActionResult<ServiceRequestDto[]> GetAll() => Ok(Array.Empty<ServiceRequestDto>());
+
+        [HttpGet("{id}")]
+        public ActionResult<ServiceRequestDto> Get(int id) => Ok(new ServiceRequestDto());
+
+        [HttpPost]
+        public ActionResult<ServiceRequestDto> Create([FromBody] ServiceRequestCreateDto dto) => CreatedAtAction(nameof(Get), new { id = 1 }, new ServiceRequestDto());
+    }
+}

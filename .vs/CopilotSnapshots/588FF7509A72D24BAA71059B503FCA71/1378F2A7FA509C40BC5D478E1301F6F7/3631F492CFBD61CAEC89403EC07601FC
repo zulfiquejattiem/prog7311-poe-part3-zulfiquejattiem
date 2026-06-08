@@ -1,0 +1,12 @@
+﻿using TechMove.Api.Services.Interfaces;
+using TechMove.Shared.Clients;
+
+namespace TechMove.Api.Services.Implementations
+{
+    public class ClientService : IClientService
+    {
+        public Task<ClientDto[]> GetAllAsync() => Task.FromResult(Array.Empty<ClientDto>());
+        public Task<ClientDto?> GetByIdAsync(int id) => Task.FromResult<ClientDto?>(new ClientDto());
+        public Task<ClientDto> CreateAsync(ClientCreateDto dto) => Task.FromResult(new ClientDto());
+    }
+}

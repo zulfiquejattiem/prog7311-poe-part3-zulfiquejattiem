@@ -1,0 +1,12 @@
+﻿using TechMove.Api.Services.Interfaces;
+using TechMove.Shared.Contracts;
+
+namespace TechMove.Api.Services.Implementations
+{
+    public class ContractService : IContractService
+    {
+        public Task<ContractDto[]> GetAllAsync() => Task.FromResult(Array.Empty<ContractDto>());
+        public Task<ContractDto?> GetByIdAsync(int id) => Task.FromResult<ContractDto?>(new ContractDto());
+        public Task<ContractDto> CreateAsync(ContractCreateDto dto) => Task.FromResult(new ContractDto());
+    }
+}

@@ -1,0 +1,11 @@
+C:\Users\27635\source\repos\TechMove\TechMove.Shared\bin\Debug\net10.0\TechMove.Shared.deps.json
+C:\Users\27635\source\repos\TechMove\TechMove.Shared\bin\Debug\net10.0\TechMove.Shared.dll
+C:\Users\27635\source\repos\TechMove\TechMove.Shared\bin\Debug\net10.0\TechMove.Shared.pdb
+C:\Users\27635\source\repos\TechMove\TechMove.Shared\obj\Debug\net10.0\TechMove.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\27635\source\repos\TechMove\TechMove.Shared\obj\Debug\net10.0\TechMove.Shared.AssemblyInfoInputs.cache
+C:\Users\27635\source\repos\TechMove\TechMove.Shared\obj\Debug\net10.0\TechMove.Shared.AssemblyInfo.cs
+C:\Users\27635\source\repos\TechMove\TechMove.Shared\obj\Debug\net10.0\TechMove.Shared.csproj.CoreCompileInputs.cache
+C:\Users\27635\source\repos\TechMove\TechMove.Shared\obj\Debug\net10.0\TechMove.Shared.dll
+C:\Users\27635\source\repos\TechMove\TechMove.Shared\obj\Debug\net10.0\refint\TechMove.Shared.dll
+C:\Users\27635\source\repos\TechMove\TechMove.Shared\obj\Debug\net10.0\TechMove.Shared.pdb
+C:\Users\27635\source\repos\TechMove\TechMove.Shared\obj\Debug\net10.0\ref\TechMove.Shared.dll

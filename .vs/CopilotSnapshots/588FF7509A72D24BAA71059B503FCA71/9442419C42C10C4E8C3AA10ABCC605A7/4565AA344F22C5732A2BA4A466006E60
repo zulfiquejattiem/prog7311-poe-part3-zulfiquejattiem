@@ -1,0 +1,13 @@
+﻿using TechMove.Shared.Contracts;
+
+namespace TechMove.Api.Models
+{
+    public class Contract
+    {
+        public int Id { get; set; }
+        public int ClientId { get; set; }
+        public string Title { get; set; } = "";
+        public string Description { get; set; } = "";
+        public ContractStatus Status { get; set; }
+    }
+}

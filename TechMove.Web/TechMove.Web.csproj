@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <ItemGroup>
+    <ProjectReference Include="..\TechMove.Shared\TechMove.Shared.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="10.0.8">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.23.0" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>370c0749-b1ad-493b-9a24-4c24dd145bd5</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <!-- Disable generation of the native apphost executable to avoid locking
+         the produced .exe during iterative builds/debugging on Windows. -->
+    <UseAppHost>false</UseAppHost>
+  </PropertyGroup>
+
+  <!-- Kill running process that may lock build outputs on Windows. -->
+  <Target Name="KillRunningTechMoveWebProcess" BeforeTargets="BeforeBuild" Condition="'$(OS)' == 'Windows_NT'">
+    <Exec Command="powershell -NoProfile -Command &quot;Get-Process -Name 'TechMove.Web' -ErrorAction SilentlyContinue | Stop-Process -Force; Get-CimInstance Win32_Process | Where-Object { $_.CommandLine -and $_.CommandLine -like '*TechMove.Web*' } | ForEach-Object { Stop-Process -Id $_.ProcessId -Force }&quot;" IgnoreExitCode="true" />
+  </Target>
+
+</Project>

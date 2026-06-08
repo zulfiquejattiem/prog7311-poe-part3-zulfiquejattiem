@@ -1,0 +1,11 @@
+﻿using TechMove.Shared.Contracts;
+
+namespace TechMove.Api.Services.Interfaces
+{
+    public interface IContractService
+    {
+        Task<ContractDto[]> GetAllAsync();
+        Task<ContractDto?> GetByIdAsync(int id);
+        Task<ContractDto> CreateAsync(ContractCreateDto dto);
+    }
+}

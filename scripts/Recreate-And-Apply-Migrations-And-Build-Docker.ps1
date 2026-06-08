@@ -1,0 +1,137 @@
+<#
+Script: Recreate-And-Apply-Migrations-And-Build-Docker.ps1
+
+This script performs the following steps (best-effort):
+- Stops any running dotnet processes that reference the TechMove solution to avoid file locks
+- Removes existing EF Migrations for TechMove.Api
+- Cleans bin/obj folders for Api and Web projects
+- Recreates a fresh InitialCreate migration for TechMove.Api
+- Optionally applies the migration to the configured database
+- Optionally builds and starts Docker Compose stack
+
+Usage examples:
+  # Recreate migrations and apply to DB
+  ./scripts/Recreate-And-Apply-Migrations-And-Build-Docker.ps1 -ApplyMigrations
+
+  # Recreate migrations and then build & run docker-compose
+  ./scripts/Recreate-And-Apply-Migrations-And-Build-Docker.ps1 -ApplyMigrations -DockerUp
+
+Notes:
+- Run from the repository root (where the solution file is located).
+- Requires dotnet-ef on PATH for migrations: dotnet tool install --global dotnet-ef
+- Uses docker compose if -DockerUp is specified and Docker is available.
+#>
+
+param(
+    [string]$SolutionRoot = (Get-Location).Path,
+    [switch]$ApplyMigrations,
+    [switch]$DockerUp
+)
+
+Write-Host "Solution root: $SolutionRoot"
+
+function Stop-TechMoveProcesses {
+    Write-Host "Stopping dotnet processes that mention TechMove..."
+    $dotnetProcs = Get-Process -Name dotnet -ErrorAction SilentlyContinue
+    if ($dotnetProcs) {
+        foreach ($p in $dotnetProcs) {
+            try {
+                $cmd = (Get-CimInstance Win32_Process -Filter "ProcessId = $($p.Id)").CommandLine
+                if ($cmd -and ($cmd -like '*TechMove*' -or $cmd -like '*TechMove.Web*' -or $cmd -like '*TechMove.Api*')) {
+                    Write-Host "Stopping process Id $($p.Id) (commandline contains TechMove)"
+                    Stop-Process -Id $p.Id -Force -ErrorAction SilentlyContinue
+                }
+            } catch {
+                # ignore
+            }
+        }
+    }
+}
+
+function Remove-DirectorySafely($path) {
+    if (Test-Path $path) {
+        Write-Host "Removing: $path"
+        try {
+            Remove-Item $path -Force -Recurse -ErrorAction Stop
+        } catch {
+            Write-Warning ("Failed to remove {0}: {1}. Trying to unset readonly and retry..." -f $path, $_)
+            Get-ChildItem -Path $path -Recurse -Force | ForEach-Object { $_.IsReadOnly = $false }
+            try { Remove-Item $path -Force -Recurse -ErrorAction Stop } catch { Write-Error ("Still failed to remove {0}: {1}" -f $path, $_) }
+        }
+    }
+}
+
+# 1) Stop running processes
+Stop-TechMoveProcesses
+
+# 2) Delete migrations folder for API project
+$apiProject = Join-Path $SolutionRoot 'TechMove.Api'
+$migrationsFolder = Join-Path $apiProject 'Migrations'
+if (Test-Path $migrationsFolder) {
+    Write-Host "Deleting existing migrations in $migrationsFolder"
+    Remove-DirectorySafely $migrationsFolder
+} else {
+    Write-Host "No migrations folder found at $migrationsFolder"
+}
+
+# 3) Clean bin/obj for TechMove.Api and TechMove.Web to avoid locked files
+$projectsToClean = @('TechMove.Api','TechMove.Web')
+foreach ($proj in $projectsToClean) {
+    $projPath = Join-Path $SolutionRoot $proj
+    $bin = Join-Path $projPath 'bin'
+    $obj = Join-Path $projPath 'obj'
+    Remove-DirectorySafely $bin
+    Remove-DirectorySafely $obj
+}
+
+# 4) Ensure dotnet-ef exists
+if (-not (Get-Command dotnet-ef -ErrorAction SilentlyContinue)) {
+    Write-Warning "dotnet-ef not found on PATH. Install with: dotnet tool install --global dotnet-ef"
+}
+
+# 5) Recreate migration
+Push-Location $apiProject
+try {
+    $migrationName = 'InitialCreate'
+    Write-Host "Adding new migration '$migrationName' for project TechMove.Api (startup: TechMove.Api)"
+    dotnet ef migrations add $migrationName --project TechMove.Api.csproj --startup-project TechMove.Api.csproj -v
+    Write-Host "Migration creation attempted."
+} catch {
+    Write-Error "Failed to add migration (attempt 1): $_"
+    Write-Host "Attempting again using TechMove.Web as startup project..."
+    try {
+        dotnet ef migrations add $migrationName --project TechMove.Api.csproj --startup-project ..\TechMove.Web\TechMove.Web.csproj -v
+        Write-Host "Migration created with Web startup project.":
+    } catch {
+        Write-Error "Failed to add migration with Web startup project as well: $_"
+    }
+} finally {
+    Pop-Location
+}
+
+# 6) Optionally apply migrations to DB
+if ($ApplyMigrations) {
+    Push-Location $apiProject
+    try {
+        Write-Host "Applying migrations to database for TechMove.Api..."
+        dotnet ef database update --project TechMove.Api.csproj --startup-project TechMove.Api.csproj -v
+        Write-Host "Database update completed."
+    } catch {
+        Write-Error "Database update failed: $_"
+    } finally {
+        Pop-Location
+    }
+}
+
+# 7) Optionally build Docker and bring up services
+if ($DockerUp) {
+    Write-Host "Building Docker images and bringing up docker-compose (requires Docker)."
+    try {
+        docker compose build --no-cache
+        docker compose up -d
+    } catch {
+        Write-Error "Docker compose failed: $_"
+    }
+}
+
+Write-Host "Script complete."

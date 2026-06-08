@@ -1,0 +1,9 @@
+<Solution>
+  <Folder Name="/Solution Items/">
+    <File Path="docker-compose.yml" />
+  </Folder>
+  <Project Path="TechMove.Api/TechMove.Api.csproj" />
+  <Project Path="TechMove.Shared/TechMove.Shared.csproj" />
+  <Project Path="TechMove.Tests/TechMove.Tests.csproj" />
+  <Project Path="TechMove.Web/TechMove.Web.csproj" />
+</Solution>

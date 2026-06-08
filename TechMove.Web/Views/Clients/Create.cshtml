@@ -1,0 +1,26 @@
+@model TechMove.Shared.Clients.ClientCreateDto
+
+<h2>Create Client</h2>
+
+<form asp-action="Create" method="post">
+
+    <div class="form-group">
+        <label>Name</label>
+        <input asp-for="Name" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label>Contact Details</label>
+        <input asp-for="ContactDetails" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label>Region</label>
+        <input asp-for="Region" class="form-control" />
+    </div>
+
+    <br />
+
+    <button type="submit" class="btn btn-success">Save</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+</form>

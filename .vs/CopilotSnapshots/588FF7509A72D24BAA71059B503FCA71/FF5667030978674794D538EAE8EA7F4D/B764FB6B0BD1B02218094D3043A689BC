@@ -1,0 +1,18 @@
+﻿FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
+WORKDIR /app
+
+# copy entire solution
+COPY . .
+
+# build API
+WORKDIR /app/TechMove.Api
+RUN dotnet restore TechMove.Api.csproj
+RUN dotnet publish TechMove.Api.csproj -c Release -o out
+
+# runtime image
+FROM mcr.microsoft.com/dotnet/aspnet:8.0
+WORKDIR /app
+COPY --from=build /app/TechMove.Api/out ./
+
+EXPOSE 80
+ENTRYPOINT ["dotnet", "TechMove.Api.dll"]

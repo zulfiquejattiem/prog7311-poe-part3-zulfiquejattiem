@@ -1,0 +1,19 @@
+﻿using Microsoft.AspNetCore.Mvc;
+using TechMove.Shared.Contracts;
+
+namespace TechMove.Api.Controllers
+{
+    [ApiController]
+    [Route("api/[controller]")]
+    public class ContractsController : ControllerBase
+    {
+        [HttpGet]
+        public ActionResult<ContractDto[]> GetAll() => Ok(Array.Empty<ContractDto>());
+
+        [HttpGet("{id}")]
+        public ActionResult<ContractDto> Get(int id) => Ok(new ContractDto());
+
+        [HttpPost]
+        public ActionResult<ContractDto> Create([FromBody] ContractCreateDto dto) => CreatedAtAction(nameof(Get), new { id = 1 }, new ContractDto());
+    }
+}

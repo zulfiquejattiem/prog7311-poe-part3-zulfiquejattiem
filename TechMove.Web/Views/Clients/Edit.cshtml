@@ -1,0 +1,28 @@
+@model TechMove.Shared.Clients.ClientDto
+
+<h2>Edit Client</h2>
+
+<form asp-action="Edit" method="post">
+
+    <input type="hidden" asp-for="Id" />
+
+    <div class="form-group">
+        <label>Name</label>
+        <input asp-for="Name" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label>Contact Details</label>
+        <input asp-for="ContactDetails" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label>Region</label>
+        <input asp-for="Region" class="form-control" />
+    </div>
+
+    <br />
+
+    <button type="submit" class="btn btn-primary">Update</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+</form>

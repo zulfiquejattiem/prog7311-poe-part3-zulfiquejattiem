@@ -1,0 +1,37 @@
+﻿using System.IO;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Design;
+using Microsoft.Extensions.Configuration;
+
+namespace TechMove.Api.Data
+{
+    // Provides a design-time factory for EF Core tools so migrations work regardless of startup project
+    public class DesignTimeDbContextFactory : IDesignTimeDbContextFactory<ApplicationDbContext>
+    {
+        public ApplicationDbContext CreateDbContext(string[] args)
+        {
+            var basePath = Directory.GetCurrentDirectory();
+
+            var builder = new ConfigurationBuilder()
+                .SetBasePath(basePath)
+                .AddJsonFile("appsettings.json", optional: true)
+                .AddJsonFile("appsettings.Development.json", optional: true)
+                .AddEnvironmentVariables();
+
+            var configuration = builder.Build();
+
+            var optionsBuilder = new DbContextOptionsBuilder<ApplicationDbContext>();
+
+            var connectionString = configuration.GetConnectionString("DefaultConnection");
+            if (string.IsNullOrEmpty(connectionString))
+            {
+                // Fallback to a reasonable local default if no connection string is found
+                connectionString = "Server=(localdb)\\mssqllocaldb;Database=TechMoveDb;Trusted_Connection=True;";
+            }
+
+            optionsBuilder.UseSqlServer(connectionString);
+
+            return new ApplicationDbContext(optionsBuilder.Options);
+        }
+    }
+}

@@ -1,0 +1,9 @@
+﻿using TechMove.Api.Models;
+
+namespace TechMove.Api.Services.Interfaces
+{
+    public interface IFileService
+    {
+        Task<FileDownloadResult> GetFileAsync(string id);
+    }
+}

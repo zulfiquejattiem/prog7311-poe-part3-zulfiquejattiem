@@ -1,0 +1,11 @@
+﻿namespace TechMove.Shared.ServiceRequests
+{
+    public enum ServiceRequestStatus
+    {
+        Open,
+        InProgress,
+        OnHold,
+        Completed,
+        Cancelled
+    }
+}

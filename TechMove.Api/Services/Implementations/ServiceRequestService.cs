@@ -1,0 +1,13 @@
+using TechMove.Api.Models;
+using TechMove.Api.Services.Interfaces;
+
+namespace TechMove.Api.Services.Implementations
+{
+    public class ServiceRequestService : IServiceRequestService
+    {
+        public async Task<ServiceRequest> CreateAsync(ServiceRequest request)
+        {
+            return await Task.FromResult(request);
+        }
+    }
+}

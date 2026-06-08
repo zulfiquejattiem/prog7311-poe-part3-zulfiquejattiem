@@ -1,0 +1,41 @@
+﻿using Microsoft.EntityFrameworkCore;
+using TechMove.Api.Data;
+using TechMove.Api.Models;
+using TechMove.Api.Services.Interfaces;
+using TechMove.Shared.Contracts;
+
+namespace TechMove.Api.Services.Implementations
+{
+    public class ContractService : IContractService
+    {
+        private readonly ApplicationDbContext _context;
+
+        public ContractService(ApplicationDbContext context)
+        {
+            _context = context;
+        }
+
+        public async Task<List<Contract>> GetAllAsync()
+        {
+            return await _context.Contracts.Include(c => c.Client).ToListAsync();
+        }
+
+        public async Task<Contract> CreateAsync(Contract contract)
+        {
+            _context.Contracts.Add(contract);
+            await _context.SaveChangesAsync();
+            return contract;
+        }
+
+        public async Task<Contract?> UpdateStatusAsync(int id, int status)
+        {
+            var contract = await _context.Contracts.FindAsync(id);
+            if (contract == null) return null;
+
+            contract.Status = (Shared.Contracts.ContractStatus)status;
+            await _context.SaveChangesAsync();
+
+            return contract;
+        }
+    }
+}

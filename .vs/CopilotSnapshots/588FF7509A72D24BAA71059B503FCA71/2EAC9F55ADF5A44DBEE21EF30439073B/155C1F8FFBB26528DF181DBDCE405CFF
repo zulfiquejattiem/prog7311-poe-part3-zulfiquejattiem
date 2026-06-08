@@ -1,0 +1,23 @@
+﻿@model List<TechMove.Shared.Clients.ClientDto>
+
+<h2>Clients</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Contact</th>
+            <th>Region</th>
+        </tr>
+    </thead>
+    <tbody>
+    @foreach (var c in Model)
+    {
+        <tr>
+            <td>@c.Name</td>
+            <td>@c.ContactDetails</td>
+            <td>@c.Region</td>
+        </tr>
+    }
+    </tbody>
+</table>

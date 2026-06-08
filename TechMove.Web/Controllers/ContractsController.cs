@@ -1,0 +1,91 @@
+using Microsoft.AspNetCore.Mvc;
+using System.Net.Http.Headers;
+using System.Net.Http.Json;
+using TechMove.Shared.Contracts;
+using TechMove.Shared.Clients;
+
+namespace TechMove.Web.Controllers
+{
+    public class ContractsController : Controller
+    {
+        private readonly HttpClient _http;
+
+        public ContractsController(IHttpClientFactory factory)
+        {
+            _http = factory.CreateClient("api");
+        }
+
+        private bool IsLoggedIn()
+        {
+            return !string.IsNullOrEmpty(HttpContext.Session.GetString("JWT"));
+        }
+
+        private void AddJwt()
+        {
+            var token = HttpContext.Session.GetString("JWT");
+
+            if (string.IsNullOrEmpty(token))
+                throw new Exception("Not logged in");
+
+            _http.DefaultRequestHeaders.Authorization =
+                new AuthenticationHeaderValue("Bearer", token);
+        }
+
+        public async Task<IActionResult> Index()
+        {
+            if (!IsLoggedIn())
+                return RedirectToAction("Login", "Auth");
+
+            AddJwt();
+            var data = await _http.GetFromJsonAsync<List<ContractDto>>("api/contracts");
+
+            return View(data);
+        }
+
+        public async Task<IActionResult> Create()
+        {
+            if (!IsLoggedIn())
+                return RedirectToAction("Login", "Auth");
+
+            AddJwt();
+            var clients = await _http.GetFromJsonAsync<List<ClientDto>>("api/clients");
+
+            ViewBag.Clients = clients;
+            return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Create(ContractCreateDto dto, IFormFile file)
+        {
+            AddJwt();
+
+            var content = new MultipartFormDataContent();
+
+            content.Add(new StringContent(dto.ClientId.ToString()), "ClientId");
+            content.Add(new StringContent(dto.ServiceLevel), "ServiceLevel");
+            content.Add(new StringContent(dto.StartDate.ToString("o")), "StartDate");
+
+            if (dto.EndDate.HasValue)
+                content.Add(new StringContent(dto.EndDate.Value.ToString("o")), "EndDate");
+
+            if (file != null)
+            {
+                var streamContent = new StreamContent(file.OpenReadStream());
+                streamContent.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue(file.ContentType ?? "application/pdf");
+                content.Add(streamContent, "file", file.FileName);
+            }
+
+            var response = await _http.PostAsync("api/contracts", content);
+
+            if (!response.IsSuccessStatusCode)
+            {
+                ModelState.AddModelError("", "Failed to create contract");
+                // repopulate clients
+                ViewBag.Clients = await _http.GetFromJsonAsync<List<ClientDto>>("api/clients");
+                return View(dto);
+            }
+
+            return RedirectToAction(nameof(Index));
+        }
+    }
+}

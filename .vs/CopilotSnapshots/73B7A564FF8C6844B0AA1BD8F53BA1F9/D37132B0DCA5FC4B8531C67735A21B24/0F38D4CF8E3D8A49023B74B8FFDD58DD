@@ -1,0 +1,173 @@
+﻿using Microsoft.AspNetCore.Mvc;
+using System.Net.Http.Headers;
+using System.Net.Http.Json;
+using TechMove.Shared.ServiceRequests;
+using TechMove.Shared.Contracts;
+
+namespace TechMove.Web.Controllers
+{
+    public class ServiceRequestsController : Controller
+    {
+        private readonly HttpClient _http;
+
+        public ServiceRequestsController(IHttpClientFactory factory)
+        {
+            _http = factory.CreateClient("api");
+        }
+
+        private bool IsLoggedIn()
+        {
+            return !string.IsNullOrEmpty(HttpContext.Session.GetString("JWT"));
+        }
+
+        private void AddJwt()
+        {
+            var token = HttpContext.Session.GetString("JWT");
+
+            if (string.IsNullOrEmpty(token))
+                throw new Exception("Not logged in");
+
+            _http.DefaultRequestHeaders.Authorization =
+                new AuthenticationHeaderValue("Bearer", token);
+        }
+
+        // ✅ LIST
+        public async Task<IActionResult> Index()
+        {
+            if (!IsLoggedIn())
+                return RedirectToAction("Login", "Auth");
+
+            AddJwt();
+            var data = await _http.GetFromJsonAsync<List<ServiceRequestDto>>("api/servicerequests");
+
+            return View(data);
+        }
+
+        // ✅ CREATE
+        public async Task<IActionResult> Create()
+        {
+            if (!IsLoggedIn())
+                return RedirectToAction("Login", "Auth");
+
+            AddJwt();
+            ViewBag.Contracts = await _http.GetFromJsonAsync<List<ContractDto>>("api/contracts");
+
+            return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Create(ServiceRequestCreateDto dto)
+        {
+            if (!IsLoggedIn())
+                return RedirectToAction("Login", "Auth");
+
+            AddJwt();
+
+            try
+            {
+                var response = await _http.PostAsJsonAsync("api/servicerequests", dto);
+
+                if (!response.IsSuccessStatusCode)
+                {
+                    ModelState.AddModelError("", "Invalid contract status or server error");
+                    // Repopulate contracts for the view before returning so the select list renders
+                    ViewBag.Contracts = await _http.GetFromJsonAsync<List<ContractDto>>("api/contracts");
+                    return View(dto);
+                }
+
+                return RedirectToAction(nameof(Index));
+            }
+            catch (Exception ex)
+            {
+                ModelState.AddModelError("", "An error occurred while creating the request");
+                // try to repopulate contracts, ignore failures
+                try { ViewBag.Contracts = await _http.GetFromJsonAsync<List<ContractDto>>("api/contracts"); } catch { }
+                return View(dto);
+            }
+        }
+
+        // ✅ DETAILS
+        public async Task<IActionResult> Details(int id)
+        {
+            if (!IsLoggedIn())
+                return RedirectToAction("Login", "Auth");
+
+            AddJwt();
+            var response = await _http.GetAsync($"api/servicerequests/{id}");
+            if (!response.IsSuccessStatusCode)
+            {
+                return NotFound();
+            }
+
+            var item = await response.Content.ReadFromJsonAsync<ServiceRequestDto>();
+            return View(item);
+        }
+
+        // ✅ EDIT
+        public async Task<IActionResult> Edit(int id)
+        {
+            if (!IsLoggedIn())
+                return RedirectToAction("Login", "Auth");
+
+            AddJwt();
+            var response = await _http.GetAsync($"api/servicerequests/{id}");
+            if (!response.IsSuccessStatusCode)
+            {
+                return NotFound();
+            }
+
+            var item = await response.Content.ReadFromJsonAsync<ServiceRequestDto>();
+            return View(item);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Edit(ServiceRequestDto dto)
+        {
+            if (!IsLoggedIn())
+                return RedirectToAction("Login", "Auth");
+
+            AddJwt();
+            var response = await _http.PutAsJsonAsync($"api/servicerequests/{dto.Id}", dto);
+            if (!response.IsSuccessStatusCode)
+            {
+                ModelState.AddModelError("", "Update failed");
+                return View(dto);
+            }
+
+            return RedirectToAction(nameof(Index));
+        }
+
+        // ✅ DELETE
+        public async Task<IActionResult> Delete(int id)
+        {
+            if (!IsLoggedIn())
+                return RedirectToAction("Login", "Auth");
+
+            AddJwt();
+            var response = await _http.GetAsync($"api/servicerequests/{id}");
+            if (!response.IsSuccessStatusCode)
+            {
+                return NotFound();
+            }
+
+            var item = await response.Content.ReadFromJsonAsync<ServiceRequestDto>();
+            return View(item);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> DeleteConfirmed(int id)
+        {
+            if (!IsLoggedIn())
+                return RedirectToAction("Login", "Auth");
+
+            AddJwt();
+            var response = await _http.DeleteAsync($"api/servicerequests/{id}");
+            if (!response.IsSuccessStatusCode)
+            {
+                ModelState.AddModelError("", "Delete failed");
+            }
+
+            return RedirectToAction(nameof(Index));
+        }
+    }
+}

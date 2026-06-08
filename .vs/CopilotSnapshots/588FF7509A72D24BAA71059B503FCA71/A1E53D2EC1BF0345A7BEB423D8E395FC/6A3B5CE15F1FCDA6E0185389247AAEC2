@@ -1,0 +1,12 @@
+﻿using TechMove.Api.Services.Interfaces;
+using TechMove.Shared.ServiceRequests;
+
+namespace TechMove.Api.Services.Implementations
+{
+    public class ServiceRequestService : IServiceRequestService
+    {
+        public Task<ServiceRequestDto[]> GetAllAsync() => Task.FromResult(Array.Empty<ServiceRequestDto>());
+        public Task<ServiceRequestDto?> GetByIdAsync(int id) => Task.FromResult<ServiceRequestDto?>(new ServiceRequestDto());
+        public Task<ServiceRequestDto> CreateAsync(ServiceRequestCreateDto dto) => Task.FromResult(new ServiceRequestDto());
+    }
+}

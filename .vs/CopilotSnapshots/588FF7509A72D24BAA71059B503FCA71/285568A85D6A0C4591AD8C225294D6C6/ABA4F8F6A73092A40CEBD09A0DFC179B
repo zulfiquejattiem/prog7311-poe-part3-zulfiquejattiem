@@ -1,0 +1,52 @@
+﻿using System.Linq;
+using TechMove.Api.Models;
+
+namespace TechMove.Api.Data
+{
+    public static class SeedData
+    {
+        public static void EnsureSeedData(ApplicationDbContext context)
+        {
+            if (!context.Clients.Any())
+            {
+                context.Clients.AddRange(
+                    new Client { Name = "Acme Corp", ContactDetails = "acme@example.com", Region = "North" },
+                    new Client { Name = "Globex", ContactDetails = "info@globex.com", Region = "West" }
+                );
+
+                context.SaveChanges();
+            }
+
+            if (!context.Contracts.Any())
+            {
+                var clientId = context.Clients.First().Id;
+
+                context.Contracts.Add(new Contract
+                {
+                    ClientId = clientId,
+                    ServiceLevel = "Standard",
+                    Status = TechMove.Shared.Contracts.ContractStatus.Active,
+                    StartDate = DateTime.UtcNow
+                });
+
+                context.SaveChanges();
+            }
+
+            if (!context.ServiceRequests.Any())
+            {
+                var contractId = context.Contracts.First().Id;
+
+                context.ServiceRequests.Add(new ServiceRequest
+                {
+                    ContractId = contractId,
+                    Description = "Initial request",
+                    CostUSD = 100.00m,
+                    CostZAR = 1850.00m,
+                    Status = TechMove.Shared.ServiceRequests.ServiceRequestStatus.Pending
+                });
+
+                context.SaveChanges();
+            }
+        }
+    }
+}

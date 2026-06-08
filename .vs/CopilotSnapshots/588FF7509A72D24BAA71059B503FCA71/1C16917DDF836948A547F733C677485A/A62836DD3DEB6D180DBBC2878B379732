@@ -1,0 +1,9 @@
+﻿namespace TechMove.Api.Models
+{
+    public class FileDownloadResult
+    {
+        public string FileName { get; set; } = "";
+        public byte[] Content { get; set; } = System.Array.Empty<byte>();
+        public string ContentType { get; set; } = "application/octet-stream";
+    }
+}

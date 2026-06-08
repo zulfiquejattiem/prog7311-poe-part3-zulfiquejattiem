@@ -1,0 +1,16 @@
+﻿using Microsoft.AspNetCore.Http;
+using TechMove.Api.Services.Interfaces;
+
+namespace TechMove.Api.Services.Implementations
+{
+    public class FileService : IFileService
+    {
+        public async Task<string> SavePdfAsync(IFormFile file)
+        {
+            if (!file.FileName.EndsWith(".pdf"))
+                throw new Exception("Only PDF allowed");
+
+            return "saved";
+        }
+    }
+}

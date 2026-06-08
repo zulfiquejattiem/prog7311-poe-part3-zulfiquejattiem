@@ -1,0 +1,142 @@
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Authorization;
+using TechMove.Api.Data;
+using TechMove.Api.Models;
+using TechMove.Api.Services.Interfaces;
+using TechMove.Shared.Contracts;
+
+namespace TechMove.Api.Controllers
+{
+    [Authorize]
+    [ApiController]
+    [Route("api/[controller]")]
+    public class ContractsController : ControllerBase
+    {
+        private readonly ApplicationDbContext _context;
+        private readonly IFileService _fileService;
+
+        public ContractsController(ApplicationDbContext context, IFileService fileService)
+        {
+            _context = context;
+            _fileService = fileService;
+        }
+
+        [AllowAnonymous]
+        [HttpGet]
+        public async Task<IActionResult> Get()
+        {
+            var result = await _context.Contracts
+                .Include(c => c.Client)
+                .Select(c => new ContractDto
+                {
+                    Id = c.Id,
+                    ClientId = c.ClientId,
+                    ClientName = c.Client != null ? c.Client.Name : "",
+                    StartDate = c.StartDate,
+                    EndDate = c.EndDate,
+                    Status = c.Status,
+                    ServiceLevel = c.ServiceLevel,
+                    AgreementPath = c.AgreementPath
+                })
+                .ToListAsync();
+
+            return Ok(result);
+        }
+
+        [AllowAnonymous]
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetById(int id)
+        {
+            var contract = await _context.Contracts
+                .Include(c => c.Client)
+                .FirstOrDefaultAsync(c => c.Id == id);
+
+            if (contract == null) return NotFound();
+
+            return Ok(new ContractDto
+            {
+                Id = contract.Id,
+                ClientId = contract.ClientId,
+                ClientName = contract.Client != null ? contract.Client.Name : "",
+                StartDate = contract.StartDate,
+                EndDate = contract.EndDate,
+                Status = contract.Status,
+                ServiceLevel = contract.ServiceLevel,
+                AgreementPath = contract.AgreementPath
+            });
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Create([FromForm] ContractCreateDto dto, IFormFile? file)
+        {
+            try
+            {
+                // log incoming form and model state for debugging
+                var logger = HttpContext.RequestServices.GetService<Microsoft.Extensions.Logging.ILogger<ContractsController>>();
+                logger?.LogInformation("Create contract called for client {ClientId}", dto.ClientId);
+
+                if (!ModelState.IsValid)
+                {
+                    logger?.LogWarning("Invalid model state: {Errors}", string.Join("; ", ModelState.Values.SelectMany(v => v.Errors).Select(e => e.ErrorMessage)));
+                    return BadRequest(ModelState);
+                }
+
+                string? path = null;
+
+                if (file != null)
+                {
+                    logger?.LogInformation("Received file: {FileName} length={Length}", file.FileName, file.Length);
+                    path = await _fileService.SavePdfAsync(file);
+                }
+
+                var contract = new Contract
+                {
+                    ClientId = dto.ClientId,
+                    StartDate = dto.StartDate,
+                    EndDate = dto.EndDate,
+                    Status = ContractStatus.Draft,
+                    ServiceLevel = dto.ServiceLevel,
+                    AgreementPath = path
+                };
+
+                _context.Contracts.Add(contract);
+                await _context.SaveChangesAsync();
+
+                var resultDto = contract.ToDto();
+                return CreatedAtAction(nameof(GetById), new { id = contract.Id }, resultDto);
+            }
+            catch (Exception ex)
+            {
+                var logger = HttpContext.RequestServices.GetService<Microsoft.Extensions.Logging.ILogger<ContractsController>>();
+                logger?.LogError(ex, "Error creating contract for client {ClientId}", dto?.ClientId);
+                return Problem("An error occurred while creating the contract.");
+            }
+        }
+
+        [HttpPut("{id}/status")]
+        public async Task<IActionResult> UpdateStatus(int id, [FromBody] ContractStatusUpdateDto dto)
+        {
+            var contract = await _context.Contracts.FindAsync(id);
+            if (contract == null) return NotFound();
+
+            contract.Status = dto.Status;
+            await _context.SaveChangesAsync();
+
+            var dtoResult = contract.ToDto();
+            return Ok(dtoResult);
+        }
+
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> Delete(int id)
+        {
+            var contract = await _context.Contracts.FindAsync(id);
+            if (contract == null) return NotFound();
+
+            _context.Contracts.Remove(contract);
+            await _context.SaveChangesAsync();
+
+            return NoContent();
+        }
+    }
+}

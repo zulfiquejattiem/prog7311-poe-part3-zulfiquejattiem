@@ -1,0 +1,12 @@
+﻿using TechMove.Api.Services.Interfaces;
+
+namespace TechMove.Api.Services.Implementations
+{
+    public class CurrencyExchangeService : ICurrencyExchangeService
+    {
+        public async Task<decimal> GetUsdToZarAsync()
+        {
+            return await Task.FromResult(18.50m);
+        }
+    }
+}

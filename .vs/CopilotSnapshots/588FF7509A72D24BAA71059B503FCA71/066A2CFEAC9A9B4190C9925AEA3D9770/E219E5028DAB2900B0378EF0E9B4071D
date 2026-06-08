@@ -1,0 +1,45 @@
+﻿using Microsoft.AspNetCore.Mvc;
+using TechMove.Shared.Contracts;
+using TechMove.Api.Data;
+using Microsoft.EntityFrameworkCore;
+
+namespace TechMove.Api.Controllers
+{
+    [ApiController]
+    [Route("api/[controller]")]
+    public class ContractsController : ControllerBase
+    {
+        private readonly ApplicationDbContext _context;
+
+        public ContractsController(ApplicationDbContext context)
+        {
+            _context = context;
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> Get(
+            DateTime? startDate,
+            DateTime? endDate,
+            ContractStatus? status)
+        {
+            var query = _context.Contracts.AsQueryable();
+
+            if (startDate.HasValue)
+                query = query.Where(c => c.StartDate >= startDate);
+
+            if (endDate.HasValue)
+                query = query.Where(c => c.EndDate <= endDate);
+
+            if (status.HasValue)
+                query = query.Where(c => c.Status == status);
+
+            return Ok(await query.ToListAsync());
+        }
+
+        [HttpGet("{id}")]
+        public ActionResult<ContractDto> Get(int id) => Ok(new ContractDto());
+
+        [HttpPost]
+        public ActionResult<ContractDto> Create([FromBody] ContractCreateDto dto) => CreatedAtAction(nameof(Get), new { id = 1 }, new ContractDto());
+    }
+}

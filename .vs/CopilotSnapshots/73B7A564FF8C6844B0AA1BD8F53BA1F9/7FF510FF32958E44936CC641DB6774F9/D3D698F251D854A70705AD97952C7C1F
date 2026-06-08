@@ -1,0 +1,63 @@
+﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using TechMove.Api.Data;
+using TechMove.Api.Models;
+using TechMove.Api.Services.Interfaces;
+using TechMove.Shared.Contracts;
+using TechMove.Shared.ServiceRequests;
+
+namespace TechMove.Api.Controllers
+{
+    [ApiController]
+    [Route("api/[controller]")]
+    public class ServiceRequestsController : ControllerBase
+    {
+        private readonly ApplicationDbContext _context;
+        private readonly ICurrencyExchangeService _currency;
+
+        public ServiceRequestsController(ApplicationDbContext context,
+            ICurrencyExchangeService currency)
+        {
+            _context = context;
+            _currency = currency;
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> Get()
+        {
+            return Ok(await _context.ServiceRequests.ToListAsync());
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Create(ServiceRequestCreateDto dto)
+        {
+            var contract = await _context.Contracts.FindAsync(dto.ContractId);
+
+            if (contract == null)
+                return BadRequest("Contract not found");
+
+            // ✅ WORKFLOW RULE
+            if (contract.Status == ContractStatus.Expired ||
+                contract.Status == ContractStatus.OnHold)
+            {
+                return BadRequest("Cannot create request for expired/on-hold contract");
+            }
+
+            var rate = await _currency.GetUsdToZarAsync();
+
+            var request = new ServiceRequest
+            {
+                ContractId = dto.ContractId,
+                Description = dto.Description,
+                CostUSD = dto.CostUSD,
+                CostZAR = dto.CostUSD * rate,
+                Status = ServiceRequestStatus.Pending
+            };
+
+            _context.ServiceRequests.Add(request);
+            await _context.SaveChangesAsync();
+
+            return Ok(request);
+        }
+    }
+}

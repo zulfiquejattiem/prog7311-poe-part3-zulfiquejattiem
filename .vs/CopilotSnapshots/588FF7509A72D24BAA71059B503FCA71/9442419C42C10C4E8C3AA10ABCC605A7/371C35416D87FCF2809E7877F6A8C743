@@ -1,0 +1,10 @@
+﻿using TechMove.Api.Services.Interfaces;
+
+namespace TechMove.Api.Services.Implementations
+{
+    public class CurrencyExchangeService : ICurrencyExchangeService
+    {
+        public Task<decimal> GetExchangeRateAsync(string fromCurrency, string toCurrency)
+            => Task.FromResult(1.0m);
+    }
+}

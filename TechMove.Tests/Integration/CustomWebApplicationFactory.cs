@@ -1,0 +1,74 @@
+using System.Linq;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Mvc.Testing;
+using Microsoft.AspNetCore.TestHost;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
+using TechMove.Api.Data;
+using TechMove.Api.Models;
+using TechMove.Shared.Contracts;
+
+namespace TechMove.Tests.Integration;
+
+public class CustomWebApplicationFactory : WebApplicationFactory<Program>
+{
+    protected override void ConfigureWebHost(IWebHostBuilder builder)
+    {
+        // Ensure the application runs in the Testing environment so Program.cs
+        // can conditionally change behavior (skip SQL Server provider registration).
+        builder.UseEnvironment("Testing");
+
+        builder.ConfigureServices(services =>
+        {
+            // Remove existing ApplicationDbContext registration and any provider-specific registrations
+            // Remove descriptors manually to avoid needing extra extension methods.
+            var descriptorsToRemove = services.Where(d => d.ServiceType == typeof(DbContextOptions<ApplicationDbContext>) || d.ServiceType == typeof(ApplicationDbContext)).ToList();
+            foreach (var d in descriptorsToRemove)
+            {
+                services.Remove(d);
+            }
+
+            // Add InMemory database for tests
+            services.AddDbContext<ApplicationDbContext>(options => options.UseInMemoryDatabase("TechMove_TestDb"));
+
+            // Add a simple authentication scheme for tests and set it as default
+            services.AddAuthentication(options =>
+            {
+                options.DefaultAuthenticateScheme = "Test";
+                options.DefaultChallengeScheme = "Test";
+            })
+            .AddScheme<Microsoft.AspNetCore.Authentication.AuthenticationSchemeOptions, TestAuthHandler>("Test", options => { });
+
+            // Build the service provider and seed the in-memory database
+            var sp = services.BuildServiceProvider();
+            using (var scope = sp.CreateScope())
+            {
+                var scopedServices = scope.ServiceProvider;
+                var db = scopedServices.GetRequiredService<ApplicationDbContext>();
+
+                // Ensure database is created for the in-memory provider
+                db.Database.EnsureCreated();
+
+                // Seed minimal data: one client and one contract
+                if (!db.Clients.Any())
+                {
+                    var client = new Client { Name = "Test Client", ContactDetails = "test@example.com", Region = "NA" };
+                    db.Clients.Add(client);
+                    db.SaveChanges();
+
+                    var contract = new Contract
+                    {
+                        ClientId = client.Id,
+                        StartDate = System.DateTime.UtcNow.AddDays(-30),
+                        EndDate = System.DateTime.UtcNow.AddDays(30),
+                        Status = ContractStatus.Active,
+                        ServiceLevel = "Standard"
+                    };
+                    db.Contracts.Add(contract);
+                    db.SaveChanges();
+                }
+            }
+        });
+    }
+}

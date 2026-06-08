@@ -1,0 +1,13 @@
+﻿using TechMove.Api.Models;
+using TechMove.Api.Services.Interfaces;
+
+namespace TechMove.Api.Services.Implementations
+{
+    public class FileService : IFileService
+    {
+        public Task<FileDownloadResult> GetFileAsync(string id)
+        {
+            return Task.FromResult(new FileDownloadResult { FileName = "", Content = Array.Empty<byte>(), ContentType = "application/octet-stream" });
+        }
+    }
+}

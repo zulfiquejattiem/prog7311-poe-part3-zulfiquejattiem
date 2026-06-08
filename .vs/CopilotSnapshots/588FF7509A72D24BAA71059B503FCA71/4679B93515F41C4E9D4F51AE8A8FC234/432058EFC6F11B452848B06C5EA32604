@@ -1,0 +1,36 @@
+﻿using System.Net;
+using System.Net.Http.Json;
+using System.Net;
+using System.Net.Http.Json;
+using Microsoft.AspNetCore.Mvc.Testing;
+using Xunit;
+
+namespace TechMove.Tests.Integration;
+
+public class ContractsIntegrationTests : IClassFixture<CustomWebApplicationFactory>
+{
+    private readonly CustomWebApplicationFactory _factory;
+
+    public ContractsIntegrationTests(CustomWebApplicationFactory factory)
+    {
+        _factory = factory;
+    }
+
+    [Fact]
+    public async Task GetContracts_ReturnsOk_AndJsonNotNull()
+    {
+        var client = _factory.CreateClient(new WebApplicationFactoryClientOptions
+        {
+            AllowAutoRedirect = false
+        });
+
+        var resp = await client.GetAsync("/api/contracts");
+
+        // In our test host we registered a test auth scheme that authenticates requests,
+        // so the endpoint should return OK and JSON.
+        Assert.Equal(HttpStatusCode.OK, resp.StatusCode);
+
+        var items = await resp.Content.ReadFromJsonAsync<object?>();
+        Assert.NotNull(items);
+    }
+}

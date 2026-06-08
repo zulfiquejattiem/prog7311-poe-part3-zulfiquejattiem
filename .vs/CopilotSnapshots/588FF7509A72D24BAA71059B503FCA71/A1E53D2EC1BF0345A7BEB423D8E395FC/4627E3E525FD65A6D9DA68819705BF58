@@ -1,0 +1,11 @@
+﻿namespace TechMove.Shared.ServiceRequests
+{
+    public class ServiceRequestDto
+    {
+        public int Id { get; set; }
+        public int ClientId { get; set; }
+        public string Summary { get; set; } = "";
+        public string Details { get; set; } = "";
+        public ServiceRequestStatus Status { get; set; }
+    }
+}

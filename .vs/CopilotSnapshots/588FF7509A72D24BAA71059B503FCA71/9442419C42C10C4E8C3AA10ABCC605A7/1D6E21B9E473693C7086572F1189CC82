@@ -1,0 +1,17 @@
+﻿using Microsoft.AspNetCore.Mvc;
+using TechMove.Shared.Auth;
+
+namespace TechMove.Api.Controllers
+{
+    [ApiController]
+    [Route("api/[controller]")]
+    public class AuthController : ControllerBase
+    {
+        [HttpPost("login")]
+        public ActionResult<LoginResponseDto> Login([FromBody] LoginRequestDto req)
+        {
+            // Placeholder: return dummy token
+            return Ok(new LoginResponseDto { Token = "", ExpiresAt = System.DateTime.UtcNow.AddHours(1) });
+        }
+    }
+}

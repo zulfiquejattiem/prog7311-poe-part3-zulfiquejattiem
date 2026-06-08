@@ -1,0 +1,20 @@
+﻿using Microsoft.AspNetCore.Mvc;
+using TechMove.Api.Models;
+using TechMove.Shared.Clients;
+
+namespace TechMove.Api.Controllers
+{
+    [ApiController]
+    [Route("api/[controller]")]
+    public class ClientsController : ControllerBase
+    {
+        [HttpGet]
+        public ActionResult<ClientDto[]> GetAll() => Ok(Array.Empty<ClientDto>());
+
+        [HttpGet("{id}")]
+        public ActionResult<ClientDto> Get(int id) => Ok(new ClientDto());
+
+        [HttpPost]
+        public ActionResult<ClientDto> Create([FromBody] ClientCreateDto dto) => CreatedAtAction(nameof(Get), new { id = 1 }, new ClientDto());
+    }
+}

@@ -1,0 +1,22 @@
+﻿using System.Net.Http.Json;
+
+namespace TechMove.Api.Services.Implementations
+{
+    public class CurrencyExchangeService
+    {
+        private readonly HttpClient _http;
+
+        public CurrencyExchangeService(HttpClient http)
+        {
+            _http = http;
+        }
+
+        public async Task<decimal> GetUsdToZarAsync()
+        {
+            var response = await _http.GetFromJsonAsync<dynamic>(
+                "https://api.exchangerate.host/latest?base=USD&symbols=ZAR");
+
+            return (decimal)response.rates.ZAR;
+        }
+    }
+}

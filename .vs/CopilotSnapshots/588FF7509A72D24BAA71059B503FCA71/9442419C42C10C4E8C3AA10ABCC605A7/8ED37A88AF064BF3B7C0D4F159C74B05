@@ -1,0 +1,8 @@
+﻿namespace TechMove.Shared.Contracts
+{
+    public class ContractStatusUpdateDto
+    {
+        public int ContractId { get; set; }
+        public ContractStatus NewStatus { get; set; }
+    }
+}

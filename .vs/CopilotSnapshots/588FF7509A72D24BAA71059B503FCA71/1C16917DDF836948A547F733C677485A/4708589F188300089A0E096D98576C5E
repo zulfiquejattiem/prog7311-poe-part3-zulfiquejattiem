@@ -1,0 +1,30 @@
+﻿using Microsoft.AspNetCore.Mvc;
+using System.Net.Http;
+using System.Net.Http.Json;
+using TechMove.Shared.Clients;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+
+namespace TechMove.Web.Controllers
+{
+    public class ClientsController : Controller
+    {
+        private readonly HttpClient _http;
+
+        public ClientsController(IHttpClientFactory factory)
+        {
+            _http = factory.CreateClient("api");
+        }
+
+        public async Task<IActionResult> Index()
+        {
+            var data = await _http.GetFromJsonAsync<List<ClientDto>>("api/clients");
+            return View(data);
+        }
+
+        public IActionResult Create() => View();
+        public IActionResult Edit(int id) => View();
+        public IActionResult Delete(int id) => View();
+        public IActionResult Details(int id) => View();
+    }
+}

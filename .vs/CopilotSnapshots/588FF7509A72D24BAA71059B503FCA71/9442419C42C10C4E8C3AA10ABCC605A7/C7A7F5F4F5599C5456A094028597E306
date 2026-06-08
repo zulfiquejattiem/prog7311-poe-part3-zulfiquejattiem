@@ -1,0 +1,9 @@
+﻿namespace TechMove.Shared.Contracts
+{
+    public class ContractCreateDto
+    {
+        public int ClientId { get; set; }
+        public string Title { get; set; } = "";
+        public string Description { get; set; } = "";
+    }
+}

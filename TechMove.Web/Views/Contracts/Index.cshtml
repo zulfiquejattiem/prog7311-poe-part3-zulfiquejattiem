@@ -1,0 +1,45 @@
+@model IEnumerable<TechMove.Shared.Contracts.ContractDto>
+
+<h2>Contracts</h2>
+
+<a asp-action="Create" class="btn btn-primary">Create New</a>
+
+<table class="table mt-3">
+    <thead>
+        <tr>
+            <th>Client</th>
+            <th>Service Level</th>
+            <th>Status</th>
+            <th>Start</th>
+            <th>End</th>
+            <th>Agreement</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var c in Model)
+        {
+            <tr>
+                <td>@c.ClientName</td>
+                <td>@c.ServiceLevel</td>
+                <td>@c.Status</td>
+                <td>@c.StartDate.ToShortDateString()</td>
+                <td>@c.EndDate?.ToShortDateString()</td>
+
+                <td>
+                    @if (!string.IsNullOrEmpty(c.AgreementPath))
+                    {
+                        <a href="https://localhost:7023/uploads/@c.AgreementPath"
+                               target="_blank"
+                               class="btn btn-sm btn-outline-primary">
+                            View PDF
+                        </a>
+                    }
+                    else
+                    {
+                        <span>No file</span>
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

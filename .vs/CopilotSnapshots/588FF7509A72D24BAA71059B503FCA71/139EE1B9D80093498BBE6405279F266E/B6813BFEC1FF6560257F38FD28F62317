@@ -1,0 +1,114 @@
+﻿using System;
+using Microsoft.EntityFrameworkCore;
+using TechMove.Api.Data;
+using TechMove.Api.Services.Interfaces;
+using TechMove.Api.Services.Implementations;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
+using System.Threading;
+
+var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddControllers();
+
+// Determine connection string with fallback for non-Windows (avoid LocalDB on Linux/containers)
+var defaultConn = builder.Configuration.GetConnectionString("DefaultConnection");
+var conn = defaultConn;
+if (string.IsNullOrWhiteSpace(conn) || (!OperatingSystem.IsWindows() && conn.Contains("(localdb", StringComparison.OrdinalIgnoreCase)))
+{
+    conn = builder.Configuration["DockerConnection"]
+           ?? "Server=db;Database=TechMoveDb;User Id=sa;Password=Your_password123;TrustServerCertificate=True;";
+}
+
+// ✅ DB
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
+    options.UseSqlServer(conn));
+
+// ✅ Services
+builder.Services.AddScoped<IClientService, ClientService>();
+builder.Services.AddScoped<IContractService, ContractService>();
+builder.Services.AddScoped<IServiceRequestService, ServiceRequestService>();
+builder.Services.AddScoped<ICurrencyExchangeService, CurrencyExchangeService>();
+builder.Services.AddScoped<IFileService, FileService>();
+
+builder.Services.AddHttpClient();
+
+// ✅ JWT AUTH
+var jwtKey = builder.Configuration["JwtKey"] ?? "THIS_IS_A_SUPER_SECRET_KEY_12345";
+var key = Encoding.UTF8.GetBytes(jwtKey);
+
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+    .AddJwtBearer(options =>
+    {
+        options.TokenValidationParameters = new TokenValidationParameters
+        {
+            ValidateIssuer = true,
+            ValidateAudience = false,
+            ValidateLifetime = true,
+            ValidateIssuerSigningKey = true,
+            ValidIssuer = "TechMoveApi",
+            IssuerSigningKey = new SymmetricSecurityKey(key)
+        };
+    });
+
+// ✅ Swagger
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
+
+var app = builder.Build();
+
+// ✅ DEV ERROR PAGE
+if (app.Environment.IsDevelopment())
+{
+    app.UseDeveloperExceptionPage();
+}
+
+// ✅ Swagger
+app.UseSwagger();
+app.UseSwaggerUI();
+
+// ✅ Static files (for uploaded PDFs)
+app.UseStaticFiles();
+
+// ✅ Security
+app.UseHttpsRedirection();
+app.UseAuthentication();
+app.UseAuthorization();
+
+// ✅ DB MIGRATION + SEED with retry (wait for SQL Server readiness)
+using (var scope = app.Services.CreateScope())
+{
+    var db = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
+    var loggerFactory = scope.ServiceProvider.GetRequiredService<ILoggerFactory>();
+    var logger = loggerFactory.CreateLogger("Migration");
+
+    var maxAttempts = 12;
+    var delay = TimeSpan.FromSeconds(5);
+    for (int attempt = 1; attempt <= maxAttempts; attempt++)
+    {
+        try
+        {
+            logger.LogInformation("Attempting database migrate: attempt {Attempt}", attempt);
+            db.Database.Migrate();
+            SeedData.EnsureSeedData(db);
+            logger.LogInformation("Database migration and seed completed.");
+            break;
+        }
+        catch (Exception ex)
+        {
+            logger.LogWarning(ex, "Database not ready (attempt {Attempt}/{Max}). Retrying in {Delay}s.", attempt, maxAttempts, (int)delay.TotalSeconds);
+            if (attempt == maxAttempts)
+            {
+                logger.LogError(ex, "Failed to apply migrations after {Max} attempts.");
+                throw;
+            }
+            Thread.Sleep(delay);
+        }
+    }
+}
+
+// ✅ Controllers
+app.MapControllers();
+
+app.Run();

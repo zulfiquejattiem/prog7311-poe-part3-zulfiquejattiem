@@ -1,0 +1,11 @@
+﻿using TechMove.Shared.Clients;
+
+namespace TechMove.Api.Services.Interfaces
+{
+    public interface IClientService
+    {
+        Task<ClientDto[]> GetAllAsync();
+        Task<ClientDto?> GetByIdAsync(int id);
+        Task<ClientDto> CreateAsync(ClientCreateDto dto);
+    }
+}

@@ -1,0 +1,26 @@
+using Microsoft.EntityFrameworkCore;
+using TechMove.Api.Models;
+
+namespace TechMove.Api.Data
+{
+    public class ApplicationDbContext : DbContext
+    {
+        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) { }
+
+        public DbSet<Client> Clients { get; set; }
+        public DbSet<Contract> Contracts { get; set; }
+        public DbSet<ServiceRequest> ServiceRequests { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+
+            // Ensure decimal precision for monetary values to avoid truncation warnings
+            modelBuilder.Entity<ServiceRequest>(builder =>
+            {
+                builder.Property(s => s.CostUSD).HasPrecision(18, 2);
+                builder.Property(s => s.CostZAR).HasPrecision(18, 2);
+            });
+        }
+    }
+}

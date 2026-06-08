@@ -1,0 +1,11 @@
+﻿namespace TechMove.Shared.Contracts
+{
+    public enum ContractStatus
+    {
+        Draft,
+        Active,
+        Suspended,
+        Completed,
+        Cancelled
+    }
+}

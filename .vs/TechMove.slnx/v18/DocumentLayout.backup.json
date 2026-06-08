@@ -1,0 +1,969 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\27635\\source\\repos\\TechMove\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{77073E36-E873-753E-FE3E-D15ABCDF0453}|TechMove.Web\\TechMove.Web.csproj|c:\\users\\27635\\source\\repos\\techmove\\techmove.web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{77073E36-E873-753E-FE3E-D15ABCDF0453}|TechMove.Web\\TechMove.Web.csproj|solutionrelative:techmove.web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{77073E36-E873-753E-FE3E-D15ABCDF0453}|TechMove.Web\\TechMove.Web.csproj|c:\\users\\27635\\source\\repos\\techmove\\techmove.web\\controllers\\servicerequestscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{77073E36-E873-753E-FE3E-D15ABCDF0453}|TechMove.Web\\TechMove.Web.csproj|solutionrelative:techmove.web\\controllers\\servicerequestscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{77073E36-E873-753E-FE3E-D15ABCDF0453}|TechMove.Web\\TechMove.Web.csproj|c:\\users\\27635\\source\\repos\\techmove\\techmove.web\\controllers\\contractscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{77073E36-E873-753E-FE3E-D15ABCDF0453}|TechMove.Web\\TechMove.Web.csproj|solutionrelative:techmove.web\\controllers\\contractscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{77073E36-E873-753E-FE3E-D15ABCDF0453}|TechMove.Web\\TechMove.Web.csproj|c:\\users\\27635\\source\\repos\\techmove\\techmove.web\\controllers\\clientscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{77073E36-E873-753E-FE3E-D15ABCDF0453}|TechMove.Web\\TechMove.Web.csproj|solutionrelative:techmove.web\\controllers\\clientscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{77073E36-E873-753E-FE3E-D15ABCDF0453}|TechMove.Web\\TechMove.Web.csproj|c:\\users\\27635\\source\\repos\\techmove\\techmove.web\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{77073E36-E873-753E-FE3E-D15ABCDF0453}|TechMove.Web\\TechMove.Web.csproj|solutionrelative:techmove.web\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AF74ECCB-FE2A-895C-0525-2047D61BEA8F}|TechMove.Api\\TechMove.Api.csproj|c:\\users\\27635\\source\\repos\\techmove\\techmove.api\\controllers\\servicerequestscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AF74ECCB-FE2A-895C-0525-2047D61BEA8F}|TechMove.Api\\TechMove.Api.csproj|solutionrelative:techmove.api\\controllers\\servicerequestscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AF74ECCB-FE2A-895C-0525-2047D61BEA8F}|TechMove.Api\\TechMove.Api.csproj|c:\\users\\27635\\source\\repos\\techmove\\techmove.api\\controllers\\contractscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AF74ECCB-FE2A-895C-0525-2047D61BEA8F}|TechMove.Api\\TechMove.Api.csproj|solutionrelative:techmove.api\\controllers\\contractscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AF74ECCB-FE2A-895C-0525-2047D61BEA8F}|TechMove.Api\\TechMove.Api.csproj|c:\\users\\27635\\source\\repos\\techmove\\techmove.api\\controllers\\clientscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AF74ECCB-FE2A-895C-0525-2047D61BEA8F}|TechMove.Api\\TechMove.Api.csproj|solutionrelative:techmove.api\\controllers\\clientscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AF74ECCB-FE2A-895C-0525-2047D61BEA8F}|TechMove.Api\\TechMove.Api.csproj|c:\\users\\27635\\source\\repos\\techmove\\techmove.api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AF74ECCB-FE2A-895C-0525-2047D61BEA8F}|TechMove.Api\\TechMove.Api.csproj|solutionrelative:techmove.api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AF74ECCB-FE2A-895C-0525-2047D61BEA8F}|TechMove.Api\\TechMove.Api.csproj|c:\\users\\27635\\source\\repos\\techmove\\techmove.api\\models\\servicerequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AF74ECCB-FE2A-895C-0525-2047D61BEA8F}|TechMove.Api\\TechMove.Api.csproj|solutionrelative:techmove.api\\models\\servicerequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AF74ECCB-FE2A-895C-0525-2047D61BEA8F}|TechMove.Api\\TechMove.Api.csproj|c:\\users\\27635\\source\\repos\\techmove\\techmove.api\\models\\filedownloadresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AF74ECCB-FE2A-895C-0525-2047D61BEA8F}|TechMove.Api\\TechMove.Api.csproj|solutionrelative:techmove.api\\models\\filedownloadresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AF74ECCB-FE2A-895C-0525-2047D61BEA8F}|TechMove.Api\\TechMove.Api.csproj|c:\\users\\27635\\source\\repos\\techmove\\techmove.api\\models\\contractmappings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AF74ECCB-FE2A-895C-0525-2047D61BEA8F}|TechMove.Api\\TechMove.Api.csproj|solutionrelative:techmove.api\\models\\contractmappings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AF74ECCB-FE2A-895C-0525-2047D61BEA8F}|TechMove.Api\\TechMove.Api.csproj|c:\\users\\27635\\source\\repos\\techmove\\techmove.api\\models\\contract.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AF74ECCB-FE2A-895C-0525-2047D61BEA8F}|TechMove.Api\\TechMove.Api.csproj|solutionrelative:techmove.api\\models\\contract.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AF74ECCB-FE2A-895C-0525-2047D61BEA8F}|TechMove.Api\\TechMove.Api.csproj|c:\\users\\27635\\source\\repos\\techmove\\techmove.api\\models\\client.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AF74ECCB-FE2A-895C-0525-2047D61BEA8F}|TechMove.Api\\TechMove.Api.csproj|solutionrelative:techmove.api\\models\\client.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AF74ECCB-FE2A-895C-0525-2047D61BEA8F}|TechMove.Api\\TechMove.Api.csproj|c:\\users\\27635\\source\\repos\\techmove\\techmove.api\\data\\seeddata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AF74ECCB-FE2A-895C-0525-2047D61BEA8F}|TechMove.Api\\TechMove.Api.csproj|solutionrelative:techmove.api\\data\\seeddata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AF74ECCB-FE2A-895C-0525-2047D61BEA8F}|TechMove.Api\\TechMove.Api.csproj|c:\\users\\27635\\source\\repos\\techmove\\techmove.api\\data\\designtimedbcontextfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AF74ECCB-FE2A-895C-0525-2047D61BEA8F}|TechMove.Api\\TechMove.Api.csproj|solutionrelative:techmove.api\\data\\designtimedbcontextfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AF74ECCB-FE2A-895C-0525-2047D61BEA8F}|TechMove.Api\\TechMove.Api.csproj|c:\\users\\27635\\source\\repos\\techmove\\techmove.api\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AF74ECCB-FE2A-895C-0525-2047D61BEA8F}|TechMove.Api\\TechMove.Api.csproj|solutionrelative:techmove.api\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AF74ECCB-FE2A-895C-0525-2047D61BEA8F}|TechMove.Api\\TechMove.Api.csproj|c:\\users\\27635\\source\\repos\\techmove\\techmove.api\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{AF74ECCB-FE2A-895C-0525-2047D61BEA8F}|TechMove.Api\\TechMove.Api.csproj|solutionrelative:techmove.api\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AF74ECCB-FE2A-895C-0525-2047D61BEA8F}|TechMove.Api\\TechMove.Api.csproj|c:\\users\\27635\\source\\repos\\techmove\\techmove.api\\services\\interfaces\\iservicerequestservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AF74ECCB-FE2A-895C-0525-2047D61BEA8F}|TechMove.Api\\TechMove.Api.csproj|solutionrelative:techmove.api\\services\\interfaces\\iservicerequestservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AF74ECCB-FE2A-895C-0525-2047D61BEA8F}|TechMove.Api\\TechMove.Api.csproj|c:\\users\\27635\\source\\repos\\techmove\\techmove.api\\services\\interfaces\\ifileservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AF74ECCB-FE2A-895C-0525-2047D61BEA8F}|TechMove.Api\\TechMove.Api.csproj|solutionrelative:techmove.api\\services\\interfaces\\ifileservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AF74ECCB-FE2A-895C-0525-2047D61BEA8F}|TechMove.Api\\TechMove.Api.csproj|c:\\users\\27635\\source\\repos\\techmove\\techmove.api\\services\\interfaces\\icontractservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AF74ECCB-FE2A-895C-0525-2047D61BEA8F}|TechMove.Api\\TechMove.Api.csproj|solutionrelative:techmove.api\\services\\interfaces\\icontractservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AF74ECCB-FE2A-895C-0525-2047D61BEA8F}|TechMove.Api\\TechMove.Api.csproj|c:\\users\\27635\\source\\repos\\techmove\\techmove.api\\services\\interfaces\\iclientservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AF74ECCB-FE2A-895C-0525-2047D61BEA8F}|TechMove.Api\\TechMove.Api.csproj|solutionrelative:techmove.api\\services\\interfaces\\iclientservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{089100B1-113F-4E66-888A-E83F3999EAFD}|Solution Items{089100B1-113F-4E66-888A-E83F3999EAFD}|C:\\Users\\27635\\source\\repos\\TechMove\\docker-compose.yml||{06C066C6-04A2-4E5D-8202-439FD4234EF1}",
+      "RelativeMoniker": "D:0:0:{089100B1-113F-4E66-888A-E83F3999EAFD}|Solution Items{089100B1-113F-4E66-888A-E83F3999EAFD}|solutionrelative:docker-compose.yml||{06C066C6-04A2-4E5D-8202-439FD4234EF1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{77073E36-E873-753E-FE3E-D15ABCDF0453}|TechMove.Web\\TechMove.Web.csproj|c:\\users\\27635\\source\\repos\\techmove\\techmove.web\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{77073E36-E873-753E-FE3E-D15ABCDF0453}|TechMove.Web\\TechMove.Web.csproj|solutionrelative:techmove.web\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{77073E36-E873-753E-FE3E-D15ABCDF0453}|TechMove.Web\\TechMove.Web.csproj|c:\\users\\27635\\source\\repos\\techmove\\techmove.web\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{77073E36-E873-753E-FE3E-D15ABCDF0453}|TechMove.Web\\TechMove.Web.csproj|solutionrelative:techmove.web\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{77073E36-E873-753E-FE3E-D15ABCDF0453}|TechMove.Web\\TechMove.Web.csproj|c:\\users\\27635\\source\\repos\\techmove\\techmove.web\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{77073E36-E873-753E-FE3E-D15ABCDF0453}|TechMove.Web\\TechMove.Web.csproj|solutionrelative:techmove.web\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{23A08025-A97A-51BB-8F1F-C5713EDB88AE}|TechMove.Shared\\TechMove.Shared.csproj|c:\\users\\27635\\source\\repos\\techmove\\techmove.shared\\servicerequests\\servicerequeststatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{23A08025-A97A-51BB-8F1F-C5713EDB88AE}|TechMove.Shared\\TechMove.Shared.csproj|solutionrelative:techmove.shared\\servicerequests\\servicerequeststatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{23A08025-A97A-51BB-8F1F-C5713EDB88AE}|TechMove.Shared\\TechMove.Shared.csproj|c:\\users\\27635\\source\\repos\\techmove\\techmove.shared\\servicerequests\\servicerequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{23A08025-A97A-51BB-8F1F-C5713EDB88AE}|TechMove.Shared\\TechMove.Shared.csproj|solutionrelative:techmove.shared\\servicerequests\\servicerequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{23A08025-A97A-51BB-8F1F-C5713EDB88AE}|TechMove.Shared\\TechMove.Shared.csproj|c:\\users\\27635\\source\\repos\\techmove\\techmove.shared\\servicerequests\\servicerequestcreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{23A08025-A97A-51BB-8F1F-C5713EDB88AE}|TechMove.Shared\\TechMove.Shared.csproj|solutionrelative:techmove.shared\\servicerequests\\servicerequestcreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{23A08025-A97A-51BB-8F1F-C5713EDB88AE}|TechMove.Shared\\TechMove.Shared.csproj|c:\\users\\27635\\source\\repos\\techmove\\techmove.shared\\contracts\\contractstatusupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{23A08025-A97A-51BB-8F1F-C5713EDB88AE}|TechMove.Shared\\TechMove.Shared.csproj|solutionrelative:techmove.shared\\contracts\\contractstatusupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{23A08025-A97A-51BB-8F1F-C5713EDB88AE}|TechMove.Shared\\TechMove.Shared.csproj|c:\\users\\27635\\source\\repos\\techmove\\techmove.shared\\contracts\\contractstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{23A08025-A97A-51BB-8F1F-C5713EDB88AE}|TechMove.Shared\\TechMove.Shared.csproj|solutionrelative:techmove.shared\\contracts\\contractstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{23A08025-A97A-51BB-8F1F-C5713EDB88AE}|TechMove.Shared\\TechMove.Shared.csproj|c:\\users\\27635\\source\\repos\\techmove\\techmove.shared\\contracts\\contractdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{23A08025-A97A-51BB-8F1F-C5713EDB88AE}|TechMove.Shared\\TechMove.Shared.csproj|solutionrelative:techmove.shared\\contracts\\contractdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{23A08025-A97A-51BB-8F1F-C5713EDB88AE}|TechMove.Shared\\TechMove.Shared.csproj|c:\\users\\27635\\source\\repos\\techmove\\techmove.shared\\contracts\\contractcreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{23A08025-A97A-51BB-8F1F-C5713EDB88AE}|TechMove.Shared\\TechMove.Shared.csproj|solutionrelative:techmove.shared\\contracts\\contractcreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{23A08025-A97A-51BB-8F1F-C5713EDB88AE}|TechMove.Shared\\TechMove.Shared.csproj|c:\\users\\27635\\source\\repos\\techmove\\techmove.shared\\clients\\clientdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{23A08025-A97A-51BB-8F1F-C5713EDB88AE}|TechMove.Shared\\TechMove.Shared.csproj|solutionrelative:techmove.shared\\clients\\clientdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{23A08025-A97A-51BB-8F1F-C5713EDB88AE}|TechMove.Shared\\TechMove.Shared.csproj|c:\\users\\27635\\source\\repos\\techmove\\techmove.shared\\auth\\loginresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{23A08025-A97A-51BB-8F1F-C5713EDB88AE}|TechMove.Shared\\TechMove.Shared.csproj|solutionrelative:techmove.shared\\auth\\loginresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{23A08025-A97A-51BB-8F1F-C5713EDB88AE}|TechMove.Shared\\TechMove.Shared.csproj|c:\\users\\27635\\source\\repos\\techmove\\techmove.shared\\auth\\loginrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{23A08025-A97A-51BB-8F1F-C5713EDB88AE}|TechMove.Shared\\TechMove.Shared.csproj|solutionrelative:techmove.shared\\auth\\loginrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AF74ECCB-FE2A-895C-0525-2047D61BEA8F}|TechMove.Api\\TechMove.Api.csproj|c:\\users\\27635\\source\\repos\\techmove\\techmove.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AF74ECCB-FE2A-895C-0525-2047D61BEA8F}|TechMove.Api\\TechMove.Api.csproj|solutionrelative:techmove.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AF74ECCB-FE2A-895C-0525-2047D61BEA8F}|TechMove.Api\\TechMove.Api.csproj|c:\\users\\27635\\source\\repos\\techmove\\techmove.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{AF74ECCB-FE2A-895C-0525-2047D61BEA8F}|TechMove.Api\\TechMove.Api.csproj|solutionrelative:techmove.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AF74ECCB-FE2A-895C-0525-2047D61BEA8F}|TechMove.Api\\TechMove.Api.csproj|c:\\users\\27635\\source\\repos\\techmove\\techmove.api\\services\\interfaces\\icurrencyexchangeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AF74ECCB-FE2A-895C-0525-2047D61BEA8F}|TechMove.Api\\TechMove.Api.csproj|solutionrelative:techmove.api\\services\\interfaces\\icurrencyexchangeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AF74ECCB-FE2A-895C-0525-2047D61BEA8F}|TechMove.Api\\TechMove.Api.csproj|c:\\users\\27635\\source\\repos\\techmove\\techmove.api\\services\\implementations\\servicerequestservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AF74ECCB-FE2A-895C-0525-2047D61BEA8F}|TechMove.Api\\TechMove.Api.csproj|solutionrelative:techmove.api\\services\\implementations\\servicerequestservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AF74ECCB-FE2A-895C-0525-2047D61BEA8F}|TechMove.Api\\TechMove.Api.csproj|c:\\users\\27635\\source\\repos\\techmove\\techmove.api\\services\\implementations\\fileservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AF74ECCB-FE2A-895C-0525-2047D61BEA8F}|TechMove.Api\\TechMove.Api.csproj|solutionrelative:techmove.api\\services\\implementations\\fileservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AF74ECCB-FE2A-895C-0525-2047D61BEA8F}|TechMove.Api\\TechMove.Api.csproj|c:\\users\\27635\\source\\repos\\techmove\\techmove.api\\services\\implementations\\currencyexchangeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AF74ECCB-FE2A-895C-0525-2047D61BEA8F}|TechMove.Api\\TechMove.Api.csproj|solutionrelative:techmove.api\\services\\implementations\\currencyexchangeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AF74ECCB-FE2A-895C-0525-2047D61BEA8F}|TechMove.Api\\TechMove.Api.csproj|c:\\users\\27635\\source\\repos\\techmove\\techmove.api\\services\\implementations\\contractservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AF74ECCB-FE2A-895C-0525-2047D61BEA8F}|TechMove.Api\\TechMove.Api.csproj|solutionrelative:techmove.api\\services\\implementations\\contractservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AF74ECCB-FE2A-895C-0525-2047D61BEA8F}|TechMove.Api\\TechMove.Api.csproj|c:\\users\\27635\\source\\repos\\techmove\\techmove.api\\services\\implementations\\clientservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AF74ECCB-FE2A-895C-0525-2047D61BEA8F}|TechMove.Api\\TechMove.Api.csproj|solutionrelative:techmove.api\\services\\implementations\\clientservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\27635\\source\\repos\\TechMove\\scripts\\push-to-remote.ps1||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:scripts\\push-to-remote.ps1||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AF74ECCB-FE2A-895C-0525-2047D61BEA8F}|TechMove.Api\\TechMove.Api.csproj|c:\\users\\27635\\source\\repos\\techmove\\techmove.api\\data\\migrations\\applicationdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AF74ECCB-FE2A-895C-0525-2047D61BEA8F}|TechMove.Api\\TechMove.Api.csproj|solutionrelative:techmove.api\\data\\migrations\\applicationdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AF74ECCB-FE2A-895C-0525-2047D61BEA8F}|TechMove.Api\\TechMove.Api.csproj|c:\\users\\27635\\source\\repos\\techmove\\techmove.api\\data\\migrations\\20260528105341_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AF74ECCB-FE2A-895C-0525-2047D61BEA8F}|TechMove.Api\\TechMove.Api.csproj|solutionrelative:techmove.api\\data\\migrations\\20260528105341_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\27635\\source\\repos\\TechMove\\.env||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:.env||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{77073E36-E873-753E-FE3E-D15ABCDF0453}|TechMove.Web\\TechMove.Web.csproj|c:\\users\\27635\\source\\repos\\techmove\\techmove.web\\techmove.web.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{77073E36-E873-753E-FE3E-D15ABCDF0453}|TechMove.Web\\TechMove.Web.csproj|solutionrelative:techmove.web\\techmove.web.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\27635\\source\\repos\\TechMove\\scripts\\Recreate-Migrations.ps1||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:scripts\\Recreate-Migrations.ps1||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\27635\\source\\repos\\TechMove\\scripts\\Apply-Migrations.ps1||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:scripts\\Apply-Migrations.ps1||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\27635\\source\\repos\\TechMove\\scripts\\Recreate-And-Apply-Migrations-And-Build-Docker.ps1||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:scripts\\Recreate-And-Apply-Migrations-And-Build-Docker.ps1||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\27635\\source\\repos\\TechMove\\scripts\\delete-remote-then-push.ps1||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:scripts\\delete-remote-then-push.ps1||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C0685BA1-D3EB-A3EB-A597-DD443CAEEF40}|TechMove.Tests\\TechMove.Tests.csproj|c:\\users\\27635\\source\\repos\\techmove\\techmove.tests\\contractintegrationtests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C0685BA1-D3EB-A3EB-A597-DD443CAEEF40}|TechMove.Tests\\TechMove.Tests.csproj|solutionrelative:techmove.tests\\contractintegrationtests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C0685BA1-D3EB-A3EB-A597-DD443CAEEF40}|TechMove.Tests\\TechMove.Tests.csproj|c:\\users\\27635\\source\\repos\\techmove\\techmove.tests\\techmove.tests.csproj||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{C0685BA1-D3EB-A3EB-A597-DD443CAEEF40}|TechMove.Tests\\TechMove.Tests.csproj|solutionrelative:techmove.tests\\techmove.tests.csproj||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C0685BA1-D3EB-A3EB-A597-DD443CAEEF40}|TechMove.Tests\\TechMove.Tests.csproj|c:\\users\\27635\\source\\repos\\techmove\\techmove.tests\\integration\\contractsintegrationtests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C0685BA1-D3EB-A3EB-A597-DD443CAEEF40}|TechMove.Tests\\TechMove.Tests.csproj|solutionrelative:techmove.tests\\integration\\contractsintegrationtests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C0685BA1-D3EB-A3EB-A597-DD443CAEEF40}|TechMove.Tests\\TechMove.Tests.csproj|c:\\users\\27635\\source\\repos\\techmove\\techmove.tests\\integration\\customwebapplicationfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C0685BA1-D3EB-A3EB-A597-DD443CAEEF40}|TechMove.Tests\\TechMove.Tests.csproj|solutionrelative:techmove.tests\\integration\\customwebapplicationfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C0685BA1-D3EB-A3EB-A597-DD443CAEEF40}|TechMove.Tests\\TechMove.Tests.csproj|c:\\users\\27635\\source\\repos\\techmove\\techmove.tests\\integration\\testauthhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C0685BA1-D3EB-A3EB-A597-DD443CAEEF40}|TechMove.Tests\\TechMove.Tests.csproj|solutionrelative:techmove.tests\\integration\\testauthhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AF74ECCB-FE2A-895C-0525-2047D61BEA8F}|TechMove.Api\\TechMove.Api.csproj|c:\\users\\27635\\source\\repos\\techmove\\techmove.api\\techmove.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{AF74ECCB-FE2A-895C-0525-2047D61BEA8F}|TechMove.Api\\TechMove.Api.csproj|solutionrelative:techmove.api\\techmove.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ServiceRequestsController.cs",
+              "DocumentMoniker": "C:\\Users\\27635\\source\\repos\\TechMove\\TechMove.Api\\Controllers\\ServiceRequestsController.cs",
+              "RelativeDocumentMoniker": "TechMove.Api\\Controllers\\ServiceRequestsController.cs",
+              "ToolTip": "C:\\Users\\27635\\source\\repos\\TechMove\\TechMove.Api\\Controllers\\ServiceRequestsController.cs",
+              "RelativeToolTip": "TechMove.Api\\Controllers\\ServiceRequestsController.cs",
+              "ViewState": "AgIAAGwAAAAAAAAAAAAIwHkAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-27T16:46:13.36Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\27635\\source\\repos\\TechMove\\TechMove.Web\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "TechMove.Web\\Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Users\\27635\\source\\repos\\TechMove\\TechMove.Web\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "TechMove.Web\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAACYAAAAAAAAAAAAgwDQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-27T16:53:48.779Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ClientsController.cs",
+              "DocumentMoniker": "C:\\Users\\27635\\source\\repos\\TechMove\\TechMove.Web\\Controllers\\ClientsController.cs",
+              "RelativeDocumentMoniker": "TechMove.Web\\Controllers\\ClientsController.cs",
+              "ToolTip": "C:\\Users\\27635\\source\\repos\\TechMove\\TechMove.Web\\Controllers\\ClientsController.cs",
+              "RelativeToolTip": "TechMove.Web\\Controllers\\ClientsController.cs",
+              "ViewState": "AgIAAFgAAAAAAAAAAAAkwGwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-27T16:54:20.727Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ContractsController.cs",
+              "DocumentMoniker": "C:\\Users\\27635\\source\\repos\\TechMove\\TechMove.Web\\Controllers\\ContractsController.cs",
+              "RelativeDocumentMoniker": "TechMove.Web\\Controllers\\ContractsController.cs",
+              "ToolTip": "C:\\Users\\27635\\source\\repos\\TechMove\\TechMove.Web\\Controllers\\ContractsController.cs",
+              "RelativeToolTip": "TechMove.Web\\Controllers\\ContractsController.cs",
+              "ViewState": "AgIAADQAAAAAAAAAAAAAAFoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-27T16:54:33.825Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ServiceRequestsController.cs",
+              "DocumentMoniker": "C:\\Users\\27635\\source\\repos\\TechMove\\TechMove.Web\\Controllers\\ServiceRequestsController.cs",
+              "RelativeDocumentMoniker": "TechMove.Web\\Controllers\\ServiceRequestsController.cs",
+              "ToolTip": "C:\\Users\\27635\\source\\repos\\TechMove\\TechMove.Web\\Controllers\\ServiceRequestsController.cs",
+              "RelativeToolTip": "TechMove.Web\\Controllers\\ServiceRequestsController.cs",
+              "ViewState": "AgIAANEAAAAAAAAAAAAYwO4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-27T16:54:48.236Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\27635\\source\\repos\\TechMove\\TechMove.Web\\Program.cs",
+              "RelativeDocumentMoniker": "TechMove.Web\\Program.cs",
+              "ToolTip": "C:\\Users\\27635\\source\\repos\\TechMove\\TechMove.Web\\Program.cs",
+              "RelativeToolTip": "TechMove.Web\\Program.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAACkAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-27T13:49:50.468Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ContractsController.cs",
+              "DocumentMoniker": "C:\\Users\\27635\\source\\repos\\TechMove\\TechMove.Api\\Controllers\\ContractsController.cs",
+              "RelativeDocumentMoniker": "TechMove.Api\\Controllers\\ContractsController.cs",
+              "ToolTip": "C:\\Users\\27635\\source\\repos\\TechMove\\TechMove.Api\\Controllers\\ContractsController.cs",
+              "RelativeToolTip": "TechMove.Api\\Controllers\\ContractsController.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAnwIAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-27T16:45:12.687Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ClientsController.cs",
+              "DocumentMoniker": "C:\\Users\\27635\\source\\repos\\TechMove\\TechMove.Api\\Controllers\\ClientsController.cs",
+              "RelativeDocumentMoniker": "TechMove.Api\\Controllers\\ClientsController.cs",
+              "ToolTip": "C:\\Users\\27635\\source\\repos\\TechMove\\TechMove.Api\\Controllers\\ClientsController.cs",
+              "RelativeToolTip": "TechMove.Api\\Controllers\\ClientsController.cs",
+              "ViewState": "AgIAADcAAAAAAAAAAAAkwEcAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-27T16:45:00.002Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\27635\\source\\repos\\TechMove\\TechMove.Api\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "TechMove.Api\\Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Users\\27635\\source\\repos\\TechMove\\TechMove.Api\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "TechMove.Api\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAQwCMAAABTAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-27T16:43:25.146Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ServiceRequest.cs",
+              "DocumentMoniker": "C:\\Users\\27635\\source\\repos\\TechMove\\TechMove.Api\\Models\\ServiceRequest.cs",
+              "RelativeDocumentMoniker": "TechMove.Api\\Models\\ServiceRequest.cs",
+              "ToolTip": "C:\\Users\\27635\\source\\repos\\TechMove\\TechMove.Api\\Models\\ServiceRequest.cs",
+              "RelativeToolTip": "TechMove.Api\\Models\\ServiceRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-27T16:47:39.229Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "FileDownloadResult.cs",
+              "DocumentMoniker": "C:\\Users\\27635\\source\\repos\\TechMove\\TechMove.Api\\Models\\FileDownloadResult.cs",
+              "RelativeDocumentMoniker": "TechMove.Api\\Models\\FileDownloadResult.cs",
+              "ToolTip": "C:\\Users\\27635\\source\\repos\\TechMove\\TechMove.Api\\Models\\FileDownloadResult.cs",
+              "RelativeToolTip": "TechMove.Api\\Models\\FileDownloadResult.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-27T16:47:25.429Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ContractMappings.cs",
+              "DocumentMoniker": "C:\\Users\\27635\\source\\repos\\TechMove\\TechMove.Api\\Models\\ContractMappings.cs",
+              "RelativeDocumentMoniker": "TechMove.Api\\Models\\ContractMappings.cs",
+              "ToolTip": "C:\\Users\\27635\\source\\repos\\TechMove\\TechMove.Api\\Models\\ContractMappings.cs",
+              "RelativeToolTip": "TechMove.Api\\Models\\ContractMappings.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-02T15:27:39.819Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Contract.cs",
+              "DocumentMoniker": "C:\\Users\\27635\\source\\repos\\TechMove\\TechMove.Api\\Models\\Contract.cs",
+              "RelativeDocumentMoniker": "TechMove.Api\\Models\\Contract.cs",
+              "ToolTip": "C:\\Users\\27635\\source\\repos\\TechMove\\TechMove.Api\\Models\\Contract.cs",
+              "RelativeToolTip": "TechMove.Api\\Models\\Contract.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-27T16:47:14.14Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Client.cs",
+              "DocumentMoniker": "C:\\Users\\27635\\source\\repos\\TechMove\\TechMove.Api\\Models\\Client.cs",
+              "RelativeDocumentMoniker": "TechMove.Api\\Models\\Client.cs",
+              "ToolTip": "C:\\Users\\27635\\source\\repos\\TechMove\\TechMove.Api\\Models\\Client.cs",
+              "RelativeToolTip": "TechMove.Api\\Models\\Client.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-27T16:47:03.527Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "SeedData.cs",
+              "DocumentMoniker": "C:\\Users\\27635\\source\\repos\\TechMove\\TechMove.Api\\Data\\SeedData.cs",
+              "RelativeDocumentMoniker": "TechMove.Api\\Data\\SeedData.cs",
+              "ToolTip": "C:\\Users\\27635\\source\\repos\\TechMove\\TechMove.Api\\Data\\SeedData.cs",
+              "RelativeToolTip": "TechMove.Api\\Data\\SeedData.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAQwDAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-27T16:46:50.834Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "DesignTimeDbContextFactory.cs",
+              "DocumentMoniker": "C:\\Users\\27635\\source\\repos\\TechMove\\TechMove.Api\\Data\\DesignTimeDbContextFactory.cs",
+              "RelativeDocumentMoniker": "TechMove.Api\\Data\\DesignTimeDbContextFactory.cs",
+              "ToolTip": "C:\\Users\\27635\\source\\repos\\TechMove\\TechMove.Api\\Data\\DesignTimeDbContextFactory.cs",
+              "RelativeToolTip": "TechMove.Api\\Data\\DesignTimeDbContextFactory.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAkwCgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-27T14:10:02.954Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\27635\\source\\repos\\TechMove\\TechMove.Api\\Data\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "TechMove.Api\\Data\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\27635\\source\\repos\\TechMove\\TechMove.Api\\Data\\ApplicationDbContext.cs",
+              "RelativeToolTip": "TechMove.Api\\Data\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-27T16:46:27.154Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Dockerfile",
+              "DocumentMoniker": "C:\\Users\\27635\\source\\repos\\TechMove\\TechMove.Api\\Dockerfile",
+              "RelativeDocumentMoniker": "TechMove.Api\\Dockerfile",
+              "ToolTip": "C:\\Users\\27635\\source\\repos\\TechMove\\TechMove.Api\\Dockerfile",
+              "RelativeToolTip": "TechMove.Api\\Dockerfile",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-05-27T16:50:45.914Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 55,
+              "Title": "ContractsIntegrationTests.cs",
+              "DocumentMoniker": "C:\\Users\\27635\\source\\repos\\TechMove\\TechMove.Tests\\Integration\\ContractsIntegrationTests.cs",
+              "RelativeDocumentMoniker": "TechMove.Tests\\Integration\\ContractsIntegrationTests.cs",
+              "ToolTip": "C:\\Users\\27635\\source\\repos\\TechMove\\TechMove.Tests\\Integration\\ContractsIntegrationTests.cs",
+              "RelativeToolTip": "TechMove.Tests\\Integration\\ContractsIntegrationTests.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAIBJwCIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-04T18:19:43.517Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 56,
+              "Title": "CustomWebApplicationFactory.cs",
+              "DocumentMoniker": "C:\\Users\\27635\\source\\repos\\TechMove\\TechMove.Tests\\Integration\\CustomWebApplicationFactory.cs",
+              "RelativeDocumentMoniker": "TechMove.Tests\\Integration\\CustomWebApplicationFactory.cs",
+              "ToolTip": "C:\\Users\\27635\\source\\repos\\TechMove\\TechMove.Tests\\Integration\\CustomWebApplicationFactory.cs",
+              "RelativeToolTip": "TechMove.Tests\\Integration\\CustomWebApplicationFactory.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAABBwEoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-04T18:22:11.667Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 57,
+              "Title": "TestAuthHandler.cs",
+              "DocumentMoniker": "C:\\Users\\27635\\source\\repos\\TechMove\\TechMove.Tests\\Integration\\TestAuthHandler.cs",
+              "RelativeDocumentMoniker": "TechMove.Tests\\Integration\\TestAuthHandler.cs",
+              "ToolTip": "C:\\Users\\27635\\source\\repos\\TechMove\\TechMove.Tests\\Integration\\TestAuthHandler.cs",
+              "RelativeToolTip": "TechMove.Tests\\Integration\\TestAuthHandler.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAIBJwBwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-04T18:22:16.106Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 58,
+              "Title": "TechMove.Api.csproj",
+              "DocumentMoniker": "C:\\Users\\27635\\source\\repos\\TechMove\\TechMove.Api\\TechMove.Api.csproj",
+              "RelativeDocumentMoniker": "TechMove.Api\\TechMove.Api.csproj",
+              "ToolTip": "C:\\Users\\27635\\source\\repos\\TechMove\\TechMove.Api\\TechMove.Api.csproj",
+              "RelativeToolTip": "TechMove.Api\\TechMove.Api.csproj",
+              "ViewState": "AgIAABYAAAAAAAAAAABBwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-06-04T18:26:00.446Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "IFileService.cs",
+              "DocumentMoniker": "C:\\Users\\27635\\source\\repos\\TechMove\\TechMove.Api\\Services\\Interfaces\\IFileService.cs",
+              "RelativeDocumentMoniker": "TechMove.Api\\Services\\Interfaces\\IFileService.cs",
+              "ToolTip": "C:\\Users\\27635\\source\\repos\\TechMove\\TechMove.Api\\Services\\Interfaces\\IFileService.cs",
+              "RelativeToolTip": "TechMove.Api\\Services\\Interfaces\\IFileService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-27T16:49:40.145Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 52,
+              "Title": "delete-remote-then-push.ps1",
+              "DocumentMoniker": "C:\\Users\\27635\\source\\repos\\TechMove\\scripts\\delete-remote-then-push.ps1",
+              "RelativeDocumentMoniker": "scripts\\delete-remote-then-push.ps1",
+              "ToolTip": "C:\\Users\\27635\\source\\repos\\TechMove\\scripts\\delete-remote-then-push.ps1",
+              "RelativeToolTip": "scripts\\delete-remote-then-push.ps1",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-06-04T17:55:12.352Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 54,
+              "Title": "TechMove.Tests.csproj",
+              "DocumentMoniker": "C:\\Users\\27635\\source\\repos\\TechMove\\TechMove.Tests\\TechMove.Tests.csproj",
+              "RelativeDocumentMoniker": "TechMove.Tests\\TechMove.Tests.csproj",
+              "ToolTip": "C:\\Users\\27635\\source\\repos\\TechMove\\TechMove.Tests\\TechMove.Tests.csproj",
+              "RelativeToolTip": "TechMove.Tests\\TechMove.Tests.csproj",
+              "ViewState": "AgIAAA8AAAAAAAAAAABBwBcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-06-04T18:07:15.564Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 53,
+              "Title": "ContractIntegrationTests.cs",
+              "DocumentMoniker": "C:\\Users\\27635\\source\\repos\\TechMove\\TechMove.Tests\\ContractIntegrationTests.cs",
+              "RelativeDocumentMoniker": "TechMove.Tests\\ContractIntegrationTests.cs",
+              "ToolTip": "C:\\Users\\27635\\source\\repos\\TechMove\\TechMove.Tests\\ContractIntegrationTests.cs",
+              "RelativeToolTip": "TechMove.Tests\\ContractIntegrationTests.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-04T18:07:22.844Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "IContractService.cs",
+              "DocumentMoniker": "C:\\Users\\27635\\source\\repos\\TechMove\\TechMove.Api\\Services\\Interfaces\\IContractService.cs",
+              "RelativeDocumentMoniker": "TechMove.Api\\Services\\Interfaces\\IContractService.cs",
+              "ToolTip": "C:\\Users\\27635\\source\\repos\\TechMove\\TechMove.Api\\Services\\Interfaces\\IContractService.cs",
+              "RelativeToolTip": "TechMove.Api\\Services\\Interfaces\\IContractService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-27T16:49:14.943Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "IClientService.cs",
+              "DocumentMoniker": "C:\\Users\\27635\\source\\repos\\TechMove\\TechMove.Api\\Services\\Interfaces\\IClientService.cs",
+              "RelativeDocumentMoniker": "TechMove.Api\\Services\\Interfaces\\IClientService.cs",
+              "ToolTip": "C:\\Users\\27635\\source\\repos\\TechMove\\TechMove.Api\\Services\\Interfaces\\IClientService.cs",
+              "RelativeToolTip": "TechMove.Api\\Services\\Interfaces\\IClientService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-27T16:49:03.345Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "IServiceRequestService.cs",
+              "DocumentMoniker": "C:\\Users\\27635\\source\\repos\\TechMove\\TechMove.Api\\Services\\Interfaces\\IServiceRequestService.cs",
+              "RelativeDocumentMoniker": "TechMove.Api\\Services\\Interfaces\\IServiceRequestService.cs",
+              "ToolTip": "C:\\Users\\27635\\source\\repos\\TechMove\\TechMove.Api\\Services\\Interfaces\\IServiceRequestService.cs",
+              "RelativeToolTip": "TechMove.Api\\Services\\Interfaces\\IServiceRequestService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-27T16:49:58.579Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "docker-compose.yml",
+              "DocumentMoniker": "C:\\Users\\27635\\source\\repos\\TechMove\\docker-compose.yml",
+              "RelativeDocumentMoniker": "docker-compose.yml",
+              "ToolTip": "C:\\Users\\27635\\source\\repos\\TechMove\\docker-compose.yml",
+              "RelativeToolTip": "docker-compose.yml",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAswCIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003775|",
+              "WhenOpened": "2026-05-27T12:49:34.769Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "Dockerfile",
+              "DocumentMoniker": "C:\\Users\\27635\\source\\repos\\TechMove\\TechMove.Web\\Dockerfile",
+              "RelativeDocumentMoniker": "TechMove.Web\\Dockerfile",
+              "ToolTip": "C:\\Users\\27635\\source\\repos\\TechMove\\TechMove.Web\\Dockerfile",
+              "RelativeToolTip": "TechMove.Web\\Dockerfile",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-05-27T16:55:12.971Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\27635\\source\\repos\\TechMove\\TechMove.Web\\appsettings.json",
+              "RelativeDocumentMoniker": "TechMove.Web\\appsettings.json",
+              "ToolTip": "C:\\Users\\27635\\source\\repos\\TechMove\\TechMove.Web\\appsettings.json",
+              "RelativeToolTip": "TechMove.Web\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-05-27T16:55:00.946Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\27635\\source\\repos\\TechMove\\TechMove.Web\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "TechMove.Web\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\27635\\source\\repos\\TechMove\\TechMove.Web\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "TechMove.Web\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-02T14:03:48.238Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "ServiceRequestStatus.cs",
+              "DocumentMoniker": "C:\\Users\\27635\\source\\repos\\TechMove\\TechMove.Shared\\ServiceRequests\\ServiceRequestStatus.cs",
+              "RelativeDocumentMoniker": "TechMove.Shared\\ServiceRequests\\ServiceRequestStatus.cs",
+              "ToolTip": "C:\\Users\\27635\\source\\repos\\TechMove\\TechMove.Shared\\ServiceRequests\\ServiceRequestStatus.cs",
+              "RelativeToolTip": "TechMove.Shared\\ServiceRequests\\ServiceRequestStatus.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-27T16:53:06.971Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "ServiceRequestDto.cs",
+              "DocumentMoniker": "C:\\Users\\27635\\source\\repos\\TechMove\\TechMove.Shared\\ServiceRequests\\ServiceRequestDto.cs",
+              "RelativeDocumentMoniker": "TechMove.Shared\\ServiceRequests\\ServiceRequestDto.cs",
+              "ToolTip": "C:\\Users\\27635\\source\\repos\\TechMove\\TechMove.Shared\\ServiceRequests\\ServiceRequestDto.cs",
+              "RelativeToolTip": "TechMove.Shared\\ServiceRequests\\ServiceRequestDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-27T16:52:56.876Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "ServiceRequestCreateDto.cs",
+              "DocumentMoniker": "C:\\Users\\27635\\source\\repos\\TechMove\\TechMove.Shared\\ServiceRequests\\ServiceRequestCreateDto.cs",
+              "RelativeDocumentMoniker": "TechMove.Shared\\ServiceRequests\\ServiceRequestCreateDto.cs",
+              "ToolTip": "C:\\Users\\27635\\source\\repos\\TechMove\\TechMove.Shared\\ServiceRequests\\ServiceRequestCreateDto.cs",
+              "RelativeToolTip": "TechMove.Shared\\ServiceRequests\\ServiceRequestCreateDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-27T16:52:45.247Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "ContractStatusUpdateDto.cs",
+              "DocumentMoniker": "C:\\Users\\27635\\source\\repos\\TechMove\\TechMove.Shared\\Contracts\\ContractStatusUpdateDto.cs",
+              "RelativeDocumentMoniker": "TechMove.Shared\\Contracts\\ContractStatusUpdateDto.cs",
+              "ToolTip": "C:\\Users\\27635\\source\\repos\\TechMove\\TechMove.Shared\\Contracts\\ContractStatusUpdateDto.cs",
+              "RelativeToolTip": "TechMove.Shared\\Contracts\\ContractStatusUpdateDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-27T16:52:30.413Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "ContractStatus.cs",
+              "DocumentMoniker": "C:\\Users\\27635\\source\\repos\\TechMove\\TechMove.Shared\\Contracts\\ContractStatus.cs",
+              "RelativeDocumentMoniker": "TechMove.Shared\\Contracts\\ContractStatus.cs",
+              "ToolTip": "C:\\Users\\27635\\source\\repos\\TechMove\\TechMove.Shared\\Contracts\\ContractStatus.cs",
+              "RelativeToolTip": "TechMove.Shared\\Contracts\\ContractStatus.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-27T16:52:18.848Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "ContractDto.cs",
+              "DocumentMoniker": "C:\\Users\\27635\\source\\repos\\TechMove\\TechMove.Shared\\Contracts\\ContractDto.cs",
+              "RelativeDocumentMoniker": "TechMove.Shared\\Contracts\\ContractDto.cs",
+              "ToolTip": "C:\\Users\\27635\\source\\repos\\TechMove\\TechMove.Shared\\Contracts\\ContractDto.cs",
+              "RelativeToolTip": "TechMove.Shared\\Contracts\\ContractDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-27T16:52:06.767Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "ContractCreateDto.cs",
+              "DocumentMoniker": "C:\\Users\\27635\\source\\repos\\TechMove\\TechMove.Shared\\Contracts\\ContractCreateDto.cs",
+              "RelativeDocumentMoniker": "TechMove.Shared\\Contracts\\ContractCreateDto.cs",
+              "ToolTip": "C:\\Users\\27635\\source\\repos\\TechMove\\TechMove.Shared\\Contracts\\ContractCreateDto.cs",
+              "RelativeToolTip": "TechMove.Shared\\Contracts\\ContractCreateDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-27T16:51:55.732Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "ClientDto.cs",
+              "DocumentMoniker": "C:\\Users\\27635\\source\\repos\\TechMove\\TechMove.Shared\\Clients\\ClientDto.cs",
+              "RelativeDocumentMoniker": "TechMove.Shared\\Clients\\ClientDto.cs",
+              "ToolTip": "C:\\Users\\27635\\source\\repos\\TechMove\\TechMove.Shared\\Clients\\ClientDto.cs",
+              "RelativeToolTip": "TechMove.Shared\\Clients\\ClientDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-27T16:51:43.554Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "LoginResponseDto.cs",
+              "DocumentMoniker": "C:\\Users\\27635\\source\\repos\\TechMove\\TechMove.Shared\\Auth\\LoginResponseDto.cs",
+              "RelativeDocumentMoniker": "TechMove.Shared\\Auth\\LoginResponseDto.cs",
+              "ToolTip": "C:\\Users\\27635\\source\\repos\\TechMove\\TechMove.Shared\\Auth\\LoginResponseDto.cs",
+              "RelativeToolTip": "TechMove.Shared\\Auth\\LoginResponseDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-27T16:51:31.329Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "LoginRequestDto.cs",
+              "DocumentMoniker": "C:\\Users\\27635\\source\\repos\\TechMove\\TechMove.Shared\\Auth\\LoginRequestDto.cs",
+              "RelativeDocumentMoniker": "TechMove.Shared\\Auth\\LoginRequestDto.cs",
+              "ToolTip": "C:\\Users\\27635\\source\\repos\\TechMove\\TechMove.Shared\\Auth\\LoginRequestDto.cs",
+              "RelativeToolTip": "TechMove.Shared\\Auth\\LoginRequestDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-27T16:51:18.624Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\27635\\source\\repos\\TechMove\\TechMove.Api\\Program.cs",
+              "RelativeDocumentMoniker": "TechMove.Api\\Program.cs",
+              "ToolTip": "C:\\Users\\27635\\source\\repos\\TechMove\\TechMove.Api\\Program.cs",
+              "RelativeToolTip": "TechMove.Api\\Program.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAIBJwHgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-27T13:28:00.121Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\27635\\source\\repos\\TechMove\\TechMove.Api\\appsettings.json",
+              "RelativeDocumentMoniker": "TechMove.Api\\appsettings.json",
+              "ToolTip": "C:\\Users\\27635\\source\\repos\\TechMove\\TechMove.Api\\appsettings.json",
+              "RelativeToolTip": "TechMove.Api\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-05-27T16:50:26.853Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "ICurrencyExchangeService.cs",
+              "DocumentMoniker": "C:\\Users\\27635\\source\\repos\\TechMove\\TechMove.Api\\Services\\Interfaces\\ICurrencyExchangeService.cs",
+              "RelativeDocumentMoniker": "TechMove.Api\\Services\\Interfaces\\ICurrencyExchangeService.cs",
+              "ToolTip": "C:\\Users\\27635\\source\\repos\\TechMove\\TechMove.Api\\Services\\Interfaces\\ICurrencyExchangeService.cs",
+              "RelativeToolTip": "TechMove.Api\\Services\\Interfaces\\ICurrencyExchangeService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-27T16:49:27.515Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "ServiceRequestService.cs",
+              "DocumentMoniker": "C:\\Users\\27635\\source\\repos\\TechMove\\TechMove.Api\\Services\\Implementations\\ServiceRequestService.cs",
+              "RelativeDocumentMoniker": "TechMove.Api\\Services\\Implementations\\ServiceRequestService.cs",
+              "ToolTip": "C:\\Users\\27635\\source\\repos\\TechMove\\TechMove.Api\\Services\\Implementations\\ServiceRequestService.cs",
+              "RelativeToolTip": "TechMove.Api\\Services\\Implementations\\ServiceRequestService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-27T16:48:52.52Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "FileService.cs",
+              "DocumentMoniker": "C:\\Users\\27635\\source\\repos\\TechMove\\TechMove.Api\\Services\\Implementations\\FileService.cs",
+              "RelativeDocumentMoniker": "TechMove.Api\\Services\\Implementations\\FileService.cs",
+              "ToolTip": "C:\\Users\\27635\\source\\repos\\TechMove\\TechMove.Api\\Services\\Implementations\\FileService.cs",
+              "RelativeToolTip": "TechMove.Api\\Services\\Implementations\\FileService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-27T16:48:41.411Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "CurrencyExchangeService.cs",
+              "DocumentMoniker": "C:\\Users\\27635\\source\\repos\\TechMove\\TechMove.Api\\Services\\Implementations\\CurrencyExchangeService.cs",
+              "RelativeDocumentMoniker": "TechMove.Api\\Services\\Implementations\\CurrencyExchangeService.cs",
+              "ToolTip": "C:\\Users\\27635\\source\\repos\\TechMove\\TechMove.Api\\Services\\Implementations\\CurrencyExchangeService.cs",
+              "RelativeToolTip": "TechMove.Api\\Services\\Implementations\\CurrencyExchangeService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-27T16:48:30.24Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "ContractService.cs",
+              "DocumentMoniker": "C:\\Users\\27635\\source\\repos\\TechMove\\TechMove.Api\\Services\\Implementations\\ContractService.cs",
+              "RelativeDocumentMoniker": "TechMove.Api\\Services\\Implementations\\ContractService.cs",
+              "ToolTip": "C:\\Users\\27635\\source\\repos\\TechMove\\TechMove.Api\\Services\\Implementations\\ContractService.cs",
+              "RelativeToolTip": "TechMove.Api\\Services\\Implementations\\ContractService.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAA1wCkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-27T16:48:19.685Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "ClientService.cs",
+              "DocumentMoniker": "C:\\Users\\27635\\source\\repos\\TechMove\\TechMove.Api\\Services\\Implementations\\ClientService.cs",
+              "RelativeDocumentMoniker": "TechMove.Api\\Services\\Implementations\\ClientService.cs",
+              "ToolTip": "C:\\Users\\27635\\source\\repos\\TechMove\\TechMove.Api\\Services\\Implementations\\ClientService.cs",
+              "RelativeToolTip": "TechMove.Api\\Services\\Implementations\\ClientService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-27T16:48:07.826Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "push-to-remote.ps1",
+              "DocumentMoniker": "C:\\Users\\27635\\source\\repos\\TechMove\\scripts\\push-to-remote.ps1",
+              "RelativeDocumentMoniker": "scripts\\push-to-remote.ps1",
+              "ToolTip": "C:\\Users\\27635\\source\\repos\\TechMove\\scripts\\push-to-remote.ps1",
+              "RelativeToolTip": "scripts\\push-to-remote.ps1",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-06-02T13:30:42.75Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "ApplicationDbContextModelSnapshot.cs",
+              "DocumentMoniker": "C:\\Users\\27635\\source\\repos\\TechMove\\TechMove.Api\\Data\\Migrations\\ApplicationDbContextModelSnapshot.cs",
+              "RelativeDocumentMoniker": "TechMove.Api\\Data\\Migrations\\ApplicationDbContextModelSnapshot.cs",
+              "ToolTip": "C:\\Users\\27635\\source\\repos\\TechMove\\TechMove.Api\\Data\\Migrations\\ApplicationDbContextModelSnapshot.cs",
+              "RelativeToolTip": "TechMove.Api\\Data\\Migrations\\ApplicationDbContextModelSnapshot.cs",
+              "ViewState": "AgIAAG0AAAAAAAAAAAAswJIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-28T12:45:11.001Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "20260528105341_InitialCreate.cs",
+              "DocumentMoniker": "C:\\Users\\27635\\source\\repos\\TechMove\\TechMove.Api\\Data\\Migrations\\20260528105341_InitialCreate.cs",
+              "RelativeDocumentMoniker": "TechMove.Api\\Data\\Migrations\\20260528105341_InitialCreate.cs",
+              "ToolTip": "C:\\Users\\27635\\source\\repos\\TechMove\\TechMove.Api\\Data\\Migrations\\20260528105341_InitialCreate.cs",
+              "RelativeToolTip": "TechMove.Api\\Data\\Migrations\\20260528105341_InitialCreate.cs",
+              "ViewState": "AgIAAEAAAAAAAAAAAAAowGQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-28T12:43:45.961Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 50,
+              "Title": "Apply-Migrations.ps1",
+              "DocumentMoniker": "C:\\Users\\27635\\source\\repos\\TechMove\\scripts\\Apply-Migrations.ps1",
+              "RelativeDocumentMoniker": "scripts\\Apply-Migrations.ps1",
+              "ToolTip": "C:\\Users\\27635\\source\\repos\\TechMove\\scripts\\Apply-Migrations.ps1",
+              "RelativeToolTip": "scripts\\Apply-Migrations.ps1",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-05-27T14:09:51.308Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
+              "Title": "Recreate-Migrations.ps1",
+              "DocumentMoniker": "C:\\Users\\27635\\source\\repos\\TechMove\\scripts\\Recreate-Migrations.ps1",
+              "RelativeDocumentMoniker": "scripts\\Recreate-Migrations.ps1",
+              "ToolTip": "C:\\Users\\27635\\source\\repos\\TechMove\\scripts\\Recreate-Migrations.ps1",
+              "RelativeToolTip": "scripts\\Recreate-Migrations.ps1",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-05-27T14:09:46.391Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 51,
+              "Title": "Recreate-And-Apply-Migrations-And-Build-Docker.ps1",
+              "DocumentMoniker": "C:\\Users\\27635\\source\\repos\\TechMove\\scripts\\Recreate-And-Apply-Migrations-And-Build-Docker.ps1",
+              "RelativeDocumentMoniker": "scripts\\Recreate-And-Apply-Migrations-And-Build-Docker.ps1",
+              "ToolTip": "C:\\Users\\27635\\source\\repos\\TechMove\\scripts\\Recreate-And-Apply-Migrations-And-Build-Docker.ps1",
+              "RelativeToolTip": "scripts\\Recreate-And-Apply-Migrations-And-Build-Docker.ps1",
+              "ViewState": "AgIAADoAAAAAAAAAAABBwIkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-05-27T14:11:02.325Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "TechMove.Web.csproj",
+              "DocumentMoniker": "C:\\Users\\27635\\source\\repos\\TechMove\\TechMove.Web\\TechMove.Web.csproj",
+              "RelativeDocumentMoniker": "TechMove.Web\\TechMove.Web.csproj",
+              "ToolTip": "C:\\Users\\27635\\source\\repos\\TechMove\\TechMove.Web\\TechMove.Web.csproj",
+              "RelativeToolTip": "TechMove.Web\\TechMove.Web.csproj",
+              "ViewState": "AgIAABwAAAAAAAAAAABBwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-05-27T13:56:04.573Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": ".env",
+              "DocumentMoniker": "C:\\Users\\27635\\source\\repos\\TechMove\\.env",
+              "RelativeDocumentMoniker": ".env",
+              "ToolTip": "C:\\Users\\27635\\source\\repos\\TechMove\\.env",
+              "RelativeToolTip": ".env",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-05-27T13:23:36.237Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+﻿using Microsoft.AspNetCore.Mvc;
+
+namespace TechMove.Web.Controllers
+{
+    public class ServiceRequestsController : Controller
+    {
+        public IActionResult Index() => View();
+        public IActionResult Create() => View();
+        public IActionResult Edit(int id) => View();
+        public IActionResult Delete(int id) => View();
+        public IActionResult Details(int id) => View();
+    }
+}
