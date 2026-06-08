@@ -58,3 +58,8 @@ ASP.NET Core MVC web front-end
 Dockerized deployment with health checks and seed data
 
 Run with docker-compose up -d, access API at http://localhost:5000/swagger, and Web front-end at http://localhost:5001.
+
+
+Username: admin
+
+Password: password
